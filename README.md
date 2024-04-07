@@ -17,7 +17,7 @@ wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/menu/m-upd
 
 <p align="center">
 <img src="http<p align="center">
-<img src="https://readme-typing-svg.herokuapp.com?color=%2336BCF7&center=true&vCenter=true&lines=S+C+R+I+P+T++M+A+S+I++H++D+A+L+A+M++T+A+H+A+P++P+E+N+G+E+M+B+A+N+G+A+N++M+U+N+G+K+I+N++M+A+S+I+H++B+A+N+Y+A+K++Y+G++E+R+O+R+R" />
+<img src="https://readme-typing-svg.herokuapp.com?color=%2336BCF7&center=true&vCenter=true&lines=D+e+v+e+l+o+p+m+e+n+t+s+t+a+g+e" />
 </p>
 
 ## OWNER HUB 
