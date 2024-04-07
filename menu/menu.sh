@@ -410,7 +410,7 @@ clear
 clear && clear && clear
 clear;clear;clear
 echo -e " $COLOR1╭══════════════════════════════════════════════════════════╮${NC}"
-echo -e " $COLOR1│${NC} ${COLBG1}                ${WH} • SFVT VPN TUNNELING •                 ${NC} $COLOR1│ $NC"
+echo -e " $COLOR1│${NC} ${COLBG1}                ${WH} ⛩ PAINTECH VPN TUNNELING ⛩                 ${NC} $COLOR1│ $NC"
 echo -e " $COLOR1╰══════════════════════════════════════════════════════════╯${NC}"
 echo -e " $COLOR1╭══════════════════════════════════════════════════════════╮${NC}"
 echo -e " $COLOR1│$NC${WH} ❈ OS            ${COLOR1}: ${WH}$MODEL2${NC}"
@@ -437,6 +437,9 @@ echo -e "                $COLOR1$NC${WH}  VLESS/WS    =  ${COLOR1}$vless ${NC}${
 echo -e "                $COLOR1$NC${WH}  TROJAN/GRPC =  ${COLOR1}$trtls ${NC}${WH} ACCOUNT${NC}"
 echo -e "                $COLOR1$NC${WH}  NOOBZVPNS   =  ${COLOR1}$jumlah_noobz ${NC}${WH} ACCOUNT${NC}"
 echo -e "      $COLOR1╰═════════════════════════════════════════════╯${NC}"
+echo -e "        $COLOR1             ╭══════════════════════════════════╮${NC}"
+echo -e "                     $COLOR1$NC${WH}    ORDER HUB 081249063560 ${NC}"
+echo -e "        $COLOR1             ╰══════════════════════════════════╯ ${NC}"
 echo -e " $COLOR1╭═════════════════════ • LIST MENU • ════════════════════╮${NC}"
 echo -e " $COLOR1│$NC ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}SSH-WS    ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}NOTIF BOT  ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}"
 echo -e " $COLOR1│$NC ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}VMESS     ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}THEMES     ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}"    
