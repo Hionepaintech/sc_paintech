@@ -105,7 +105,7 @@ Example config TCP_SSL 8443
 EMLBHFZfH/pBoPKJNWEVgBpE6A5ZeWbnzpI4w7UFL3EEDLbefWsxq308yXcLl9+eH0CAwm6hLFDAIEZtscw6w090SyqPTK1iZxg/XVhQupV+3gkyTy/t3OeJcEGNfgOGuBGi5HVxQNiBrKIo8gQnVnR5oDVf80HbwVUHYNiayk9B8cqGRlr8bHTMs6GcevwhgWRUhOYitN20pcF91SXkQd86eIFfMVVFpM2MkRqOiL4+ZWS1GrH+r4YVC69Q50xyZAfUm+Ps17bY3hH7qcha1o2OD8RhjYqGnRzJDJEh7tfnDG6GyLgKPk+A8wxLkd+oTDKOMMsEyFA6x2NolzEYNYIsn5C2QBlEm5NAb8RJmCkFVL+L+ekiUp0NvkIRSjhVbhcl/n1CkBWkcOPYLCwyIagNJrCoD6vkoGzprqS3IAbj7RkOQqmLquAlfeEgDk6UJao/BZaoZeeIlfhDgfATDZiooLECs/h+0/2Vff1E5wnoHovDDo3FZW8xbxXXazHWdYWg8BOU3sATfhnbZd6uWsPmAg6r3jGynibibNbO1r/n88vbvB8Au319VN8KRLI4FhPc/Z9KG+njTJkmiLoG33SbPU7fF8AP
 
 ◇━━━━━━━━━━━━━━━━━◇
- • PTECH TUNNELING • 
+ • PAINTECH  TUNNELING • 
 ◇━━━━━━━━━━━━━━━━━◇
 END
 if [[ -e /etc/noobz ]]; then
@@ -133,7 +133,7 @@ Example config TCP_SSL 8443
 <code>EMLBHFZfH/pBoPKJNWEVgBpE6A5ZeWbnzpI4w7UFL3EEDLbefWsxq308yXcLl9+eH0CAwm6hLFDAIEZtscw6w090SyqPTK1iZxg/XVhQupV+3gkyTy/t3OeJcEGNfgOGuBGi5HVxQNiBrKIo8gQnVnR5oDVf80HbwVUHYNiayk9B8cqGRlr8bHTMs6GcevwhgWRUhOYitN20pcF91SXkQd86eIFfMVVFpM2MkRqOiL4+ZWS1GrH+r4YVC69Q50xyZAfUm+Ps17bY3hH7qcha1o2OD8RhjYqGnRzJDJEh7tfnDG6GyLgKPk+A8wxLkd+oTDKOMMsEyFA6x2NolzEYNYIsn5C2QBlEm5NAb8RJmCkFVL+L+ekiUp0NvkIRSjhVbhcl/n1CkBWkcOPYLCwyIagNJrCoD6vkoGzprqS3IAbj7RkOQqmLquAlfeEgDk6UJao/BZaoZeeIlfhDgfATDZiooLECs/h+0/2Vff1E5wnoHovDDo3FZW8xbxXXazHWdYWg8BOU3sATfhnbZd6uWsPmAg6r3jGynibibNbO1r/n88vbvB8Au319VN8KRLI4FhPc/Z9KG+njTJkmiLoG33SbPU7fF8AP</code>
 
 ◇━━━━━━━━━━━━━━━━━◇
- • PTECH TUNNELING • 
+ • PAINTECH  TUNNELING • 
 ◇━━━━━━━━━━━━━━━━━◇
 "
 else
@@ -161,7 +161,7 @@ Example config TCP_SSL 8443
 <code>EMLBHFZfH/pBoPKJNWEVgBpE6A5ZeWbnzpI4w7UFL3EEDLbefWsxq308yXcLl9+eH0CAwm6hLFDAIEZtscw6w090SyqPTK1iZxg/XVhQupV+3gkyTy/t3OeJcEGNfgOGuBGi5HVxQNiBrKIo8gQnVnR5oDVf80HbwVUHYNiayk9B8cqGRlr8bHTMs6GcevwhgWRUhOYitN20pcF91SXkQd86eIFfMVVFpM2MkRqOiL4+ZWS1GrH+r4YVC69Q50xyZAfUm+Ps17bY3hH7qcha1o2OD8RhjYqGnRzJDJEh7tfnDG6GyLgKPk+A8wxLkd+oTDKOMMsEyFA6x2NolzEYNYIsn5C2QBlEm5NAb8RJmCkFVL+L+ekiUp0NvkIRSjhVbhcl/n1CkBWkcOPYLCwyIagNJrCoD6vkoGzprqS3IAbj7RkOQqmLquAlfeEgDk6UJao/BZaoZeeIlfhDgfATDZiooLECs/h+0/2Vff1E5wnoHovDDo3FZW8xbxXXazHWdYWg8BOU3sATfhnbZd6uWsPmAg6r3jGynibibNbO1r/n88vbvB8Au319VN8KRLI4FhPc/Z9KG+njTJkmiLoG33SbPU7fF8AP</code>
 
 ◇━━━━━━━━━━━━━━━━━◇
- • PTECH TUNNELING • 
+ • PAINTECH  TUNNELING • 
 ◇━━━━━━━━━━━━━━━━━◇
 "
 fi
@@ -211,7 +211,7 @@ echo "" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
 echo -e "EMLBHFZfH/pBoPKJNWEVgBpE6A5ZeWbnzpI4w7UFL3EEDLbefWsxq308yXcLl9+eH0CAwm6hLFDAIEZtscw6w090SyqPTK1iZxg/XVhQupV+3gkyTy/t3OeJcEGNfgOGuBGi5HVxQNiBrKIo8gQnVnR5oDVf80HbwVUHYNiayk9B8cqGRlr8bHTMs6GcevwhgWRUhOYitN20pcF91SXkQd86eIFfMVVFpM2MkRqOiL4+ZWS1GrH+r4YVC69Q50xyZAfUm+Ps17bY3hH7qcha1o2OD8RhjYqGnRzJDJEh7tfnDG6GyLgKPk+A8wxLkd+oTDKOMMsEyFA6x2NolzEYNYIsn5C2QBlEm5NAb8RJmCkFVL+L+ekiUp0NvkIRSjhVbhcl/n1CkBWkcOPYLCwyIagNJrCoD6vkoGzprqS3IAbj7RkOQqmLquAlfeEgDk6UJao/BZaoZeeIlfhDgfATDZiooLECs/h+0/2Vff1E5wnoHovDDo3FZW8xbxXXazHWdYWg8BOU3sATfhnbZd6uWsPmAg6r3jGynibibNbO1r/n88vbvB8Au319VN8KRLI4FhPc/Z9KG+njTJkmiLoG33SbPU7fF8AP" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
 echo "" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
 echo -e "◇━━━━━━━━━━━━━━━━━◇" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
-echo -e " • PTECH TUNNELING •" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
+echo -e " • PAINTECH  TUNNELING •" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
 echo -e "◇━━━━━━━━━━━━━━━━━◇" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
@@ -255,7 +255,7 @@ echo "$TEXT" > /etc/notiftele
 bash /etc/tele
 fi
 echo -e "$COLOR1╭══════════════════════ • ${WH}BY${NC}${COLOR1} • ═══════════════════════╮${NC}"
-echo -e "$COLOR1${NC}          ${WH}   • Paintech Vpn Tuneling  •                 $COLOR1 $NC"
+echo -e "$COLOR1${NC}          ${WH}   • Satan Fusion Tunneling •                 $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════════╯${NC}"
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
@@ -277,7 +277,7 @@ echo -e "$COLOR1╰════════════════════�
 echo "USERNAME: $user"
 echo "renew success!!"
 echo -e "$COLOR1╭══════════════════════ • ${WH}BY${NC}${COLOR1} • ═══════════════════════╮${NC}"
-echo -e "$COLOR1${NC}          ${WH}   • Paintech Vpn Tuneling  •                 $COLOR1 $NC"
+echo -e "$COLOR1${NC}          ${WH}   • Satan Fusion Tunneling •                 $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════════╯${NC}"
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
@@ -300,7 +300,7 @@ echo -e "$COLOR1╰════════════════════�
 echo "USERNAME: $user"
 echo "locked success!!"
 echo -e "$COLOR1╭══════════════════════ • ${WH}BY${NC}${COLOR1} • ═══════════════════════╮${NC}"
-echo -e "$COLOR1${NC}          ${WH}   • Paintech Vpn Tuneling  •                 $COLOR1 $NC"
+echo -e "$COLOR1${NC}          ${WH}   • Satan Fusion Tunneling •                 $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════════╯${NC}"
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
@@ -320,7 +320,7 @@ echo -e "$COLOR1╰════════════════════�
 noobzvpns --info-all-user | awk '/^\s*\+.*-> active/ {gsub(/(issued\(yyyymmdd\)|hash_key): [0-9a-f]+/, ""); print; getline; print; getline; getline; getline; print; print "═══════════════════"}'
 
 echo -e "$COLOR1╭══════════════════════ • ${WH}BY${NC}${COLOR1} • ═══════════════════════╮${NC}"
-echo -e "$COLOR1${NC}          ${WH}   • Paintech Vpn Tuneling  •                 $COLOR1 $NC"
+echo -e "$COLOR1${NC}          ${WH}   • Satan Fusion Tunneling •                 $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════════╯${NC}"
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
@@ -343,7 +343,7 @@ echo -e "$COLOR1╰════════════════════�
 echo "USERNAME: $user"
 echo "unlocked success!!"
 echo -e "$COLOR1╭══════════════════════ • ${WH}BY${NC}${COLOR1} • ═══════════════════════╮${NC}"
-echo -e "$COLOR1${NC}          ${WH}   • Paintech Vpn Tuneling  •                 $COLOR1 $NC"
+echo -e "$COLOR1${NC}          ${WH}   • Satan Fusion Tunneling •                 $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════════╯${NC}"
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
@@ -377,7 +377,7 @@ echo -e "$COLOR1╰════════════════════�
 echo "USERNAME: $user"
 echo "unlocked success!!"
 echo -e "$COLOR1╭══════════════════════ • ${WH}BY${NC}${COLOR1} • ═══════════════════════╮${NC}"
-echo -e "$COLOR1${NC}          ${WH}   • Paintech Vpn Tuneling  •                 $COLOR1 $NC"
+echo -e "$COLOR1${NC}          ${WH}   • Satan Fusion Tunneling •                 $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════════╯${NC}"
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
@@ -397,7 +397,7 @@ echo -e "$COLOR1│ $NC  ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}RENEW AK
 echo -e "$COLOR1│ $NC  ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}       ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}REMOVE ALL USER${NC}    $COLOR1 $NC"
 echo -e "$COLOR1╰═══════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════ • ${WH}BY${NC}${COLOR1} • ══════════════════════╮${NC}"
-echo -e "$COLOR1${NC}          ${WH}   • Paintech Vpn Tuneling  •                 $COLOR1 $NC"
+echo -e "$COLOR1${NC}          ${WH}   • Satan Fusion Tunneling •                 $COLOR1 $NC"
 echo -e "$COLOR1╰═══════════════════════════════════════════════════╯${NC}"
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
