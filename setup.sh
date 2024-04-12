@@ -303,7 +303,7 @@ fun_bar() {
     tput cnorm
 }
 res1() {
-wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/install/rmbl.sh && chmod +x rmbl.sh && ./rmbl.sh
+https://raw.githubusercontent.com/Hionepaintech/sc_paintech/mainn/install/rmbl.sh && chmod +x rmbl.sh && ./rmbl.sh
 clear
 }
 res2() {
@@ -377,7 +377,7 @@ fi
 if [[ $domain2 == "1" ]]; then
 clear
 echo -e  "${BIBlue}╭══════════════════════════════════════════╮${NC}"
-echo -e  "${BIBlue}│  \033[1;37mContoh subdomain paintech.premium.com        ${BIBlue}│${NC}"
+echo -e  "${BIBlue}│  \033[1;37mContoh subdomain xxx.tepllovpn.eu.org        ${BIBlue}│${NC}"
 echo -e  "${BIBlue}│    \033[1;37mxxx jadi subdomain kamu               ${BIBlue}│${NC}"
 echo -e  "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo " "
@@ -407,7 +407,7 @@ rm /root/subdomainx
 elif [[ $domain2 == "2" ]]; then
 clear
 echo -e  "${BIBlue}╭══════════════════════════════════════════╮${NC}"
-echo -e  "${BIBlue}│  \033[1;37mContoh subdomain paintech.premium.com         ${BIBlue}│${NC}"
+echo -e  "${BIBlue}│  \033[1;37mContoh subdomain xxx.vpnvip.app         ${BIBlue}│${NC}"
 echo -e  "${BIBlue}│    \033[1;37mxxx jadi subdomain kamu               ${BIBlue}│${NC}"
 echo -e  "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo " "
@@ -437,7 +437,7 @@ rm /root/subdomainx
 elif [[ $domain2 == "3" ]]; then
 clear
 echo -e  "${BIBlue}╭══════════════════════════════════════════╮${NC}"
-echo -e  "${BIBlue}│  \033[1;37mContoh subdomain paintech.premium.com        ${BIBlue}│${NC}"
+echo -e  "${BIBlue}│  \033[1;37mContoh subdomain xxx.slowapp.cfd        ${BIBlue}│${NC}"
 echo -e  "${BIBlue}│    \033[1;37mxxx jadi subdomain kamu               ${BIBlue}│${NC}"
 echo -e  "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo " "
@@ -467,7 +467,7 @@ rm /root/subdomainx
 elif [[ $domain2 == "4" ]]; then
 clear
 echo -e  "${BIBlue}╭══════════════════════════════════════════╮${NC}"
-echo -e  "${BIBlue}│  \033[1;37mContoh subdomain paintech.premium.com        ${BIBlue}│${NC}"
+echo -e  "${BIBlue}│  \033[1;37mContoh subdomain xxx.slowapp.dev        ${BIBlue}│${NC}"
 echo -e  "${BIBlue}│    \033[1;37mxxx jadi subdomain kamu               ${BIBlue}│${NC}"
 echo -e  "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo " "
@@ -528,7 +528,7 @@ clear
 echo -e  "${BIBlue}╭══════════════════════════════════════════╮${NC}"
 echo -e  "${BIBlue}│              \033[1;37mTERIMA KASIH                ${BIBlue}│${NC}"
 echo -e  "${BIBlue}│         \033[1;37mSUDAH MENGGUNAKAN SCRIPT         ${BIBlue}│${NC}"
-echo -e  "${BIBlue}│                \033[1;37mPAINTECH                 ${BIBlue}│${NC}"
+echo -e  "${BIBlue}│                \033[1;37mDARI SAYA                 ${BIBlue}│${NC}"
 echo -e  "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo " "
 until [[ $dns1 =~ ^[a-zA-Z0-9_.-]+$ ]]; do 
@@ -543,7 +543,7 @@ echo ""
 echo -e  "${BIBlue}╭══════════════════════════════════════════╮${NC}"
 echo -e  "${BIBlue}│              \033[1;37mTERIMA KASIH                ${BIBlue}│${NC}"
 echo -e  "${BIBlue}│         \033[1;37mSUDAH MENGGUNAKAN SCRIPT         ${BIBlue}│${NC}"
-echo -e  "${BIBlue}│                \033[1;37mPAINTECH                 ${BIBlue}│${NC}"
+echo -e  "${BIBlue}│                \033[1;37mDARI SAYA                 ${BIBlue}│${NC}"
 echo -e  "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo " "
 until [[ $dns2 =~ ^[a-zA-Z0-9_.-]+$ ]]; do
@@ -619,7 +619,7 @@ cd
 sysctl -w net.ipv6.conf.all.disable_ipv6=1 >/dev/null 2>&1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1 >/dev/null 2>&1
 clear
-wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/tools.sh &> /dev/null
+https://raw.githubusercontent.com/Hionepaintech/sc_paintech/mainn/tools.sh &> /dev/null
 chmod +x tools.sh 
 bash tools.sh
 clear
@@ -658,42 +658,42 @@ fun_bar() {
 
 
 res2() {
-wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+https://raw.githubusercontent.com/Hionepaintech/sc_paintech/mainn/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 clear
 } 
 
 res3() {
-wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/install/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+https://raw.githubusercontent.com/Hionepaintech/sc_paintech/mainn/install/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 clear
 }
 
 res4() {
-wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+https://raw.githubusercontent.com/Hionepaintech/sc_paintech/mainn/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
 }
 
 res5() {
-wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/install/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+https://raw.githubusercontent.com/Hionepaintech/sc_paintech/mainn/install/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 clear
 }
 
 res6() {
-wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/sshws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+https://raw.githubusercontent.com/Hionepaintech/sc_paintech/mainn/sshws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 clear
 }
 
 res7() {
-wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/menu/update.sh && chmod +x update.sh && ./update.sh
+https://raw.githubusercontent.com/Hionepaintech/sc_paintech/mainn/menu/update.sh && chmod +x update.sh && ./update.sh
 clear
 }
 
-#res8() {
-#wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/slowdns/installsl.sh && chmod +x installsl.sh && bash installsl.sh
-#clear
-#}
+res8() {
+https://raw.githubusercontent.com/Hionepaintech/sc_paintech/mainn/slowdns/installsl.sh && chmod +x installsl.sh && bash installsl.sh
+clear
+}
 
 res9() {
-wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/install/udp-custom.sh && chmod +x udp-custom.sh && bash udp-custom.sh
+https://raw.githubusercontent.com/Hionepaintech/sc_paintech/mainn/install/udp-custom.sh && chmod +x udp-custom.sh && bash udp-custom.sh
 clear
 }
 res10() {
@@ -743,10 +743,10 @@ echo -e "${BIBlue}│ ${BGCOLOR}          DOWNLOAD EXTRA MENU           ${NC}${B
 echo -e "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 fun_bar 'res7'
 
-#echo -e "${BIBlue}╭══════════════════════════════════════════╮${NC}"
-#echo -e "${BIBlue}│ ${BGCOLOR}           DOWNLOAD SLOW DNS            ${NC}${BIBlue} │${NC}"
-#echo -e "${BIBlue}╰══════════════════════════════════════════╯${NC}"
-#fun_bar 'res8'
+echo -e "${BIBlue}╭══════════════════════════════════════════╮${NC}"
+echo -e "${BIBlue}│ ${BGCOLOR}           DOWNLOAD SLOW DNS            ${NC}${BIBlue} │${NC}"
+echo -e "${BIBlue}╰══════════════════════════════════════════╯${NC}"
+fun_bar 'res8'
 
 echo -e "${BIBlue}╭══════════════════════════════════════════╮${NC}"
 echo -e "${BIBlue}│ ${BGCOLOR}          DOWNLOAD UDP COSTUM           ${NC}${BIBlue} │${NC}"
@@ -796,7 +796,7 @@ TEXT="
 <code>EXP SCRIPT : </code><code>$EXP Days</code>
 <code>━━━━━━━━━━━━━━━━━━━━</code>
 <i> Notifikasi Installer Script...</i>
-"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://t.me/paintechvpn"},{"text":"GRUP","url":"https://t.me/channelpaintech"}]]}'
+"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://t.me/abecasdee13"},{"text":"GRUP","url":"https://t.me/satanofficiall"}]]}'
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 clear
 }
@@ -824,7 +824,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/versi  )
+serverV=$( curl -sS https://raw.githubusercontent.com/Hionepaintech/script_paintech/main/versi  )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
@@ -849,6 +849,7 @@ rm /root/update.sh >/dev/null 2>&1
 rm /root/slowdns.sh >/dev/null 2>&1
 rm -rf /etc/noobz
 mkdir -p /etc/noobz
+echo "" > /etc/xray/noob
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 sleep 3
 echo  ""
