@@ -303,7 +303,7 @@ fun_bar() {
     tput cnorm
 }
 res1() {
-https://raw.githubusercontent.com/Hionepaintech/sc_paintech/mainn/install/rmbl.sh && chmod +x rmbl.sh && ./rmbl.sh
+wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/install/rmbl.sh && chmod +x rmbl.sh && ./rmbl.sh
 clear
 }
 res2() {
@@ -619,7 +619,7 @@ cd
 sysctl -w net.ipv6.conf.all.disable_ipv6=1 >/dev/null 2>&1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1 >/dev/null 2>&1
 clear
-https://raw.githubusercontent.com/Hionepaintech/sc_paintech/mainn/tools.sh &> /dev/null
+wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/tools.sh &> /dev/null
 chmod +x tools.sh 
 bash tools.sh
 clear
@@ -658,42 +658,42 @@ fun_bar() {
 
 
 res2() {
-https://raw.githubusercontent.com/Hionepaintech/sc_paintech/mainn/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 clear
 } 
 
 res3() {
-https://raw.githubusercontent.com/Hionepaintech/sc_paintech/mainn/install/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/install/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 clear
 }
 
 res4() {
-https://raw.githubusercontent.com/Hionepaintech/sc_paintech/mainn/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
 }
 
 res5() {
-https://raw.githubusercontent.com/Hionepaintech/sc_paintech/mainn/install/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/install/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 clear
 }
 
 res6() {
-https://raw.githubusercontent.com/Hionepaintech/sc_paintech/mainn/sshws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/sshws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 clear
 }
 
 res7() {
-https://raw.githubusercontent.com/Hionepaintech/sc_paintech/mainn/menu/update.sh && chmod +x update.sh && ./update.sh
+wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/menu/update.sh && chmod +x update.sh && ./update.sh
 clear
 }
 
-res8() {
-https://raw.githubusercontent.com/Hionepaintech/sc_paintech/mainn/slowdns/installsl.sh && chmod +x installsl.sh && bash installsl.sh
-clear
-}
+#res8() {
+#wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/slowdns/installsl.sh && chmod +x installsl.sh && bash installsl.sh
+#clear
+#}
 
 res9() {
-https://raw.githubusercontent.com/Hionepaintech/sc_paintech/mainn/install/udp-custom.sh && chmod +x udp-custom.sh && bash udp-custom.sh
+wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/install/udp-custom.sh && chmod +x udp-custom.sh && bash udp-custom.sh
 clear
 }
 res10() {
@@ -743,10 +743,10 @@ echo -e "${BIBlue}│ ${BGCOLOR}          DOWNLOAD EXTRA MENU           ${NC}${B
 echo -e "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 fun_bar 'res7'
 
-echo -e "${BIBlue}╭══════════════════════════════════════════╮${NC}"
-echo -e "${BIBlue}│ ${BGCOLOR}           DOWNLOAD SLOW DNS            ${NC}${BIBlue} │${NC}"
-echo -e "${BIBlue}╰══════════════════════════════════════════╯${NC}"
-fun_bar 'res8'
+#echo -e "${BIBlue}╭══════════════════════════════════════════╮${NC}"
+#echo -e "${BIBlue}│ ${BGCOLOR}           DOWNLOAD SLOW DNS            ${NC}${BIBlue} │${NC}"
+#echo -e "${BIBlue}╰══════════════════════════════════════════╯${NC}"
+#fun_bar 'res8'
 
 echo -e "${BIBlue}╭══════════════════════════════════════════╮${NC}"
 echo -e "${BIBlue}│ ${BGCOLOR}          DOWNLOAD UDP COSTUM           ${NC}${BIBlue} │${NC}"
@@ -796,7 +796,7 @@ TEXT="
 <code>EXP SCRIPT : </code><code>$EXP Days</code>
 <code>━━━━━━━━━━━━━━━━━━━━</code>
 <i> Notifikasi Installer Script...</i>
-"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://t.me/paintechvpn"},{"text":"GRUP","url":"https://t.me/channelpaintech"}]]}'
+"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://t.me/abecasdee13"},{"text":"GRUP","url":"https://t.me/satanofficiall"}]]}'
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 clear
 }
@@ -849,7 +849,6 @@ rm /root/update.sh >/dev/null 2>&1
 rm /root/slowdns.sh >/dev/null 2>&1
 rm -rf /etc/noobz
 mkdir -p /etc/noobz
-echo "" > /etc/xray/noob
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 sleep 3
 echo  ""
