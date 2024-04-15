@@ -410,7 +410,7 @@ clear
 clear && clear && clear
 clear;clear;clear
 echo -e " $COLOR1╭══════════════════════════════════════════════════════════╮${NC}"
-echo -e " $COLOR1│${NC} ${COLBG1}        ${WH} • PAINTECH VPN TUNNELING •                 ${NC} $COLOR1│ $NC"
+echo -e " $COLOR1│${NC} ${COLBG1}                ${WH} • PAINTECH VPN TUNEL •                 ${NC} $COLOR1│ $NC"
 echo -e " $COLOR1╰══════════════════════════════════════════════════════════╯${NC}"
 echo -e " $COLOR1╭══════════════════════════════════════════════════════════╮${NC}"
 echo -e " $COLOR1│$NC${WH} ❈ OS            ${COLOR1}: ${WH}$MODEL2${NC}"
