@@ -1,19 +1,24 @@
 <p align="center">
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=30&pause=1000&color=24F7F2&random=false&lines=SCRIPT+PAINTECH+VPN+;In+development+stage+;version+beta+1.0.0" alt="Typing SVG" /></a>
-  
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=43E405&random=false&width=435&lines=%22+Script+Paintech+Vpn+Tunneling+%22;%22+Paintech+VPN+Tunneling+Script+%22" alt="Typing SVG" /></a>
+
+#### Script Install 
+
 ````
 apt install -y && apt update -y && apt upgrade -y && wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/setup.sh && chmod +x setup.sh && ./setup.sh
 ````
 
-## CONTOH SCRIPT 
-![logo](https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/contoh_script.png)
+#### Contoh Script 
+![logo](https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/contoh_script.png.png)
 
-## SCRIPT UPDATE
+#### Script Update
+
 ````
 wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/menu/m-update.sh && chmod +x m-update.sh && ./m-update.sh
 ````
 
-## OWNER HUB 
-TELEGRAM : <a  href="https://t.me/paintechvpn"> VISIT HERE </a>  
-FACEBOOK : <a  href="https://www.facebook.com/paintechvpn"> VISIT HARE </a>  
-WHATSAPP: <a  href="https://wa.me/6281249063560"> VISIT HERE </a>  
+####  Owner Hub
+<p align="center">
+  <a href="https://t.me/paintechvpn"><img src="https://img.icons8.com/color/48/000000/telegram-app--v1.png"/></a>
+  <a href="https://www.facebook.com/paintechvpn"><img src="https://img.icons8.com/color/48/000000/facebook-new.png"/></a>
+  <a href="https://wa.me/6281249063560"><img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"/></a>
+</p>
