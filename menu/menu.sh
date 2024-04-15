@@ -410,14 +410,14 @@ clear
 clear && clear && clear
 clear;clear;clear
 echo -e " $COLOR1╭══════════════════════════════════════════════════════════╮${NC}"
-echo -e " $COLOR1│${NC} ${COLBG1}     ${WH} • PAINTECH VPN TUNNELING •                 ${NC} $COLOR1│ $NC"
+echo -e " $COLOR1│${NC} ${COLBG1}        ${WH} • PAINTECH VPN TUNNELING •                 ${NC} $COLOR1│ $NC"
 echo -e " $COLOR1╰══════════════════════════════════════════════════════════╯${NC}"
 echo -e " $COLOR1╭══════════════════════════════════════════════════════════╮${NC}"
 echo -e " $COLOR1│$NC${WH} ❈ OS            ${COLOR1}: ${WH}$MODEL2${NC}"
 echo -e " $COLOR1│$NC${WH} ❈ RAM           ${COLOR1}: ${WH}$tram / $uram MB${NC}"
 echo -e " $COLOR1│$NC${WH} ❈ DATE          ${COLOR1}: ${WH}$DATE2 WIB${NC}"
 echo -e " $COLOR1│$NC${WH} ❈ UPTIME        ${COLOR1}: ${WH}$uphours $upminutes $uptimecek"
-echo -e " $COLOR1│$NC${WH} ❈ TIME          ${COLOR1}: ${WH}$TIMEZONE${NC}"
+#echo -e " $COLOR1│$NC${WH} ❈ TIME          ${COLOR1}: ${WH}$TIMEZONE${NC}"
 echo -e " $COLOR1│$NC${WH} ❈ ISP           ${COLOR1}: ${WH}$ISP${NC}"
 echo -e " $COLOR1│$NC${WH} ❈ City          ${COLOR1}: ${WH}$CITY${NC}"
 echo -e " $COLOR1│$NC${WH} ❈ IP VPS        ${COLOR1}: ${WH}$MYIP${NC}"
