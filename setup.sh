@@ -335,7 +335,7 @@ clear
 echo -e  "${BIBlue}╭══════════════════════════════════════════╮${NC}"
 echo -e  "${BIBlue}│              \033[1;37mTERIMA KASIH                ${BIBlue}│${NC}"
 echo -e  "${BIBlue}│         \033[1;37mSUDAH MENGGUNAKAN SCRIPT         ${BIBlue}│${NC}"
-echo -e  "${BIBlue}│                \033[1;37Admin SF                 ${BIBlue}│${NC}"
+echo -e  "${BIBlue}│                \033[1;37PAINTECH                 ${BIBlue}│${NC}"
 echo -e  "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo " "
 until [[ $dnss =~ ^[a-zA-Z0-9_.-]+$ ]]; do 
@@ -528,7 +528,7 @@ clear
 echo -e  "${BIBlue}╭══════════════════════════════════════════╮${NC}"
 echo -e  "${BIBlue}│              \033[1;37mTERIMA KASIH                ${BIBlue}│${NC}"
 echo -e  "${BIBlue}│         \033[1;37mSUDAH MENGGUNAKAN SCRIPT         ${BIBlue}│${NC}"
-echo -e  "${BIBlue}│                \033[1;37mDARI SAYA                 ${BIBlue}│${NC}"
+echo -e  "${BIBlue}│                \033[1;37mPAINTECH                 ${BIBlue}│${NC}"
 echo -e  "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo " "
 until [[ $dns1 =~ ^[a-zA-Z0-9_.-]+$ ]]; do 
@@ -543,7 +543,7 @@ echo ""
 echo -e  "${BIBlue}╭══════════════════════════════════════════╮${NC}"
 echo -e  "${BIBlue}│              \033[1;37mTERIMA KASIH                ${BIBlue}│${NC}"
 echo -e  "${BIBlue}│         \033[1;37mSUDAH MENGGUNAKAN SCRIPT         ${BIBlue}│${NC}"
-echo -e  "${BIBlue}│                \033[1;37mDARI SAYA                 ${BIBlue}│${NC}"
+echo -e  "${BIBlue}│                \033[1;37mPAINTECH                 ${BIBlue}│${NC}"
 echo -e  "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo " "
 until [[ $dns2 =~ ^[a-zA-Z0-9_.-]+$ ]]; do
@@ -697,7 +697,7 @@ wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/install/ud
 clear
 }
 res10() {
-wget https://raw.githubusercontent.com/SatanTech/noobz/main/noobzvpns.zip
+wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/noobz/noobzvpns.zip
 unzip noobzvpns.zip
 chmod +x noobzvpns/*
 cd noobzvpns
