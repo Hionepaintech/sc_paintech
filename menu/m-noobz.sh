@@ -96,16 +96,16 @@ tcp_ssl port : 8443
 Example config TCP_STD 8080
 ◇━━━━━━━━━━━━━━━━━◇
 
-EB4cHVzsbaIHhGlETDO+Ck22fVlOm01SEuUAUWIilUiZj3ho/GZ5QY+Fdur7EGcHtimx0bRpPkPYSUVldGNLCXsFP3XfuuhmgsFMFK/RNdCJO1dF1LdAFlB4FSpoxofkIxg4/ot5WJVEGKPxuK7M3hm+93/8mTKR7LO196KrYbIcDbZtui7+g0u03le97wfPfnjHgd5YVflwaagi6T1PU2z5nXp0sLPrwKY5mdvmQu2QVAiMGE/ZqdjM1m2kcYDaecChWbLz4FiMVQBjEqa5G4h7zjBmxBtXFpWvOyApTfPIKK44eBHxKoLc7FXjaEFw7ONqexhB3svRPND1XR9VtkISZLEwrXQPPv1OO2pzOaS7unutCaP7pxQoTaChCn9Z2tN5tKDn8UsB/p8ouoLZPH4g83fYzO28dV2SC064+S3PLo6MlZxmlGuBUdhPuKgrfK+Rbejas7Z8GnCglJLUyTcwuynoFQiNVqiP64hMnvB9hSNl6YDQeST20ydA8dMIG7Jg8PJ52MRO5GIxNwl9y3ut7mPrn/+ia+rgoH+kz4mww6SBEy15TeXss7ZMYZcGj7A1vtTFOfCBvvqRgBxpQ6ZPcPX2+ohuC16/fQ==
+EP4K5Xir0hFH0Dr6ODkZjI9/qLRv/EPaVq5R9HDKsVTOWnZQ8wvQyocsCDPFuedq3CK5HCiDtSNnOl28XyudCjvb2OLpa8gL0Z397hRkiTGbWhbZW53Lln01/HkvrEL5OZLTSMqU4kCy11/9Iyta0tmDIUYyjgNBtmnDmwWMX0eAXtq5uzusq3upiulAJpisFhQvu0o7r2KF1MiSmTUOw/R8mgTpsf+arKnKmWdRNIkTSmhMLE3aD/I2Ke2FJtgHyVADBbj0S0W76XuSl39v3atM1OeuZ7mwxQwKpRfVJhWApiMV9Ho0ydANOK5BQJbhC2s38rGhk1E0A0Jw/XxNqd1a490n/FdHtfSev6BPaP6y0+xFUrr4U+H+ug+e/Avgaszd79w5VeUPK+YhWJOYiX/VnC6L9lKJ3m6OmjKXAmIF47C7lVTsosFz4IAbdqNqg9q7B1XKOiLBGUkGaZi89jQ/I6zS5+KRBv48KiQnUz6BRVQEjGl0FjP7zNR0BtfrGh1XF8EWDZMyCdw70+ydeIv+Z9VZRgNIPpvbTUeeqYYdAExEm9rtofvbodoNLJ06+n5yy1uDBt5rzzEb
 
 ◇━━━━━━━━━━━━━━━━━◇
 Example config TCP_SSL 8443
 ◇━━━━━━━━━━━━━━━━━◇
 
-EMLBHFZfH/pBoPKJNWEVgBpE6A5ZeWbnzpI4w7UFL3EEDLbefWsxq308yXcLl9+eH0CAwm6hLFDAIEZtscw6w090SyqPTK1iZxg/XVhQupV+3gkyTy/t3OeJcEGNfgOGuBGi5HVxQNiBrKIo8gQnVnR5oDVf80HbwVUHYNiayk9B8cqGRlr8bHTMs6GcevwhgWRUhOYitN20pcF91SXkQd86eIFfMVVFpM2MkRqOiL4+ZWS1GrH+r4YVC69Q50xyZAfUm+Ps17bY3hH7qcha1o2OD8RhjYqGnRzJDJEh7tfnDG6GyLgKPk+A8wxLkd+oTDKOMMsEyFA6x2NolzEYNYIsn5C2QBlEm5NAb8RJmCkFVL+L+ekiUp0NvkIRSjhVbhcl/n1CkBWkcOPYLCwyIagNJrCoD6vkoGzprqS3IAbj7RkOQqmLquAlfeEgDk6UJao/BZaoZeeIlfhDgfATDZiooLECs/h+0/2Vff1E5wnoHovDDo3FZW8xbxXXazHWdYWg8BOU3sATfhnbZd6uWsPmAg6r3jGynibibNbO1r/n88vbvB8Au319VN8KRLI4FhPc/Z9KG+njTJkmiLoG33SbPU7fF8AP
+EDN2OyxHptYxagbPw+cr7WjqSeEiEM3qJJOPRUu9B9Or+RpXrxnkf3FbEEB+gJGI2xYO6vGykvWv8h7wpkGNvqQTD8ZksoB7l6xz79DJxQg1VWBraNsMJjIguQa0my7x0TRm+RkLbU7QpONyU+YxijbzuBCpBSpNIDa2JPNHN5kuxoBvpasbJA+u8G9PZxuAh/UZXVWEGGehbxQFefkAp7WcFB1mGIArVYcbRZ3p8+m8BpKcspbfNblp0GSxFfayu19NZvSXXwQO5sVCiJ5KQdw+niUC8vRJNqYf+leIplDeeQvhbc7BMgYSznoEegcA/A8jSiRyTyp15O1zoeRxpE3naXlrkI3Xw7/VClS9KGqnHdHS0sHQqxmud1AqjSUsAsHAC/NTS3HrxUKoftqYQu4/qTQbYE/O7LtLky7lvgJgYJZRZiHXh8ETfS/i/A3XLpsx7zayzlDiw8IildWmm0t6Y13PPlhU+4tbfSjXTeO5BcqunbsH0pQoTS7Ojp2F0DqJgM3uVU6TL9A5YnViml3w8MKN5wLT9usIxQYVqf1boIuVDVmyY2BSYO8ljhkeFsO682JYQx/T5IlOrxToMLAs
 
 ◇━━━━━━━━━━━━━━━━━◇
- • SFVPN TUNNELING • 
+ • PAINTECH VPN • 
 ◇━━━━━━━━━━━━━━━━━◇
 END
 if [[ -e /etc/noobz ]]; then
@@ -124,16 +124,16 @@ tcp_ssl port : 8443
 Example config TCP_STD 8080
 ◇━━━━━━━━━━━━━━━━━◇
 
-<code>EB4cHVzsbaIHhGlETDO+Ck22fVlOm01SEuUAUWIilUiZj3ho/GZ5QY+Fdur7EGcHtimx0bRpPkPYSUVldGNLCXsFP3XfuuhmgsFMFK/RNdCJO1dF1LdAFlB4FSpoxofkIxg4/ot5WJVEGKPxuK7M3hm+93/8mTKR7LO196KrYbIcDbZtui7+g0u03le97wfPfnjHgd5YVflwaagi6T1PU2z5nXp0sLPrwKY5mdvmQu2QVAiMGE/ZqdjM1m2kcYDaecChWbLz4FiMVQBjEqa5G4h7zjBmxBtXFpWvOyApTfPIKK44eBHxKoLc7FXjaEFw7ONqexhB3svRPND1XR9VtkISZLEwrXQPPv1OO2pzOaS7unutCaP7pxQoTaChCn9Z2tN5tKDn8UsB/p8ouoLZPH4g83fYzO28dV2SC064+S3PLo6MlZxmlGuBUdhPuKgrfK+Rbejas7Z8GnCglJLUyTcwuynoFQiNVqiP64hMnvB9hSNl6YDQeST20ydA8dMIG7Jg8PJ52MRO5GIxNwl9y3ut7mPrn/+ia+rgoH+kz4mww6SBEy15TeXss7ZMYZcGj7A1vtTFOfCBvvqRgBxpQ6ZPcPX2+ohuC16/fQ==</code>
+<code>EP4K5Xir0hFH0Dr6ODkZjI9/qLRv/EPaVq5R9HDKsVTOWnZQ8wvQyocsCDPFuedq3CK5HCiDtSNnOl28XyudCjvb2OLpa8gL0Z397hRkiTGbWhbZW53Lln01/HkvrEL5OZLTSMqU4kCy11/9Iyta0tmDIUYyjgNBtmnDmwWMX0eAXtq5uzusq3upiulAJpisFhQvu0o7r2KF1MiSmTUOw/R8mgTpsf+arKnKmWdRNIkTSmhMLE3aD/I2Ke2FJtgHyVADBbj0S0W76XuSl39v3atM1OeuZ7mwxQwKpRfVJhWApiMV9Ho0ydANOK5BQJbhC2s38rGhk1E0A0Jw/XxNqd1a490n/FdHtfSev6BPaP6y0+xFUrr4U+H+ug+e/Avgaszd79w5VeUPK+YhWJOYiX/VnC6L9lKJ3m6OmjKXAmIF47C7lVTsosFz4IAbdqNqg9q7B1XKOiLBGUkGaZi89jQ/I6zS5+KRBv48KiQnUz6BRVQEjGl0FjP7zNR0BtfrGh1XF8EWDZMyCdw70+ydeIv+Z9VZRgNIPpvbTUeeqYYdAExEm9rtofvbodoNLJ06+n5yy1uDBt5rzzEb</code>
 
 ◇━━━━━━━━━━━━━━━━━◇
 Example config TCP_SSL 8443
 ◇━━━━━━━━━━━━━━━━━◇
 
-<code>EMLBHFZfH/pBoPKJNWEVgBpE6A5ZeWbnzpI4w7UFL3EEDLbefWsxq308yXcLl9+eH0CAwm6hLFDAIEZtscw6w090SyqPTK1iZxg/XVhQupV+3gkyTy/t3OeJcEGNfgOGuBGi5HVxQNiBrKIo8gQnVnR5oDVf80HbwVUHYNiayk9B8cqGRlr8bHTMs6GcevwhgWRUhOYitN20pcF91SXkQd86eIFfMVVFpM2MkRqOiL4+ZWS1GrH+r4YVC69Q50xyZAfUm+Ps17bY3hH7qcha1o2OD8RhjYqGnRzJDJEh7tfnDG6GyLgKPk+A8wxLkd+oTDKOMMsEyFA6x2NolzEYNYIsn5C2QBlEm5NAb8RJmCkFVL+L+ekiUp0NvkIRSjhVbhcl/n1CkBWkcOPYLCwyIagNJrCoD6vkoGzprqS3IAbj7RkOQqmLquAlfeEgDk6UJao/BZaoZeeIlfhDgfATDZiooLECs/h+0/2Vff1E5wnoHovDDo3FZW8xbxXXazHWdYWg8BOU3sATfhnbZd6uWsPmAg6r3jGynibibNbO1r/n88vbvB8Au319VN8KRLI4FhPc/Z9KG+njTJkmiLoG33SbPU7fF8AP</code>
+<code>EDN2OyxHptYxagbPw+cr7WjqSeEiEM3qJJOPRUu9B9Or+RpXrxnkf3FbEEB+gJGI2xYO6vGykvWv8h7wpkGNvqQTD8ZksoB7l6xz79DJxQg1VWBraNsMJjIguQa0my7x0TRm+RkLbU7QpONyU+YxijbzuBCpBSpNIDa2JPNHN5kuxoBvpasbJA+u8G9PZxuAh/UZXVWEGGehbxQFefkAp7WcFB1mGIArVYcbRZ3p8+m8BpKcspbfNblp0GSxFfayu19NZvSXXwQO5sVCiJ5KQdw+niUC8vRJNqYf+leIplDeeQvhbc7BMgYSznoEegcA/A8jSiRyTyp15O1zoeRxpE3naXlrkI3Xw7/VClS9KGqnHdHS0sHQqxmud1AqjSUsAsHAC/NTS3HrxUKoftqYQu4/qTQbYE/O7LtLky7lvgJgYJZRZiHXh8ETfS/i/A3XLpsx7zayzlDiw8IildWmm0t6Y13PPlhU+4tbfSjXTeO5BcqunbsH0pQoTS7Ojp2F0DqJgM3uVU6TL9A5YnViml3w8MKN5wLT9usIxQYVqf1boIuVDVmyY2BSYO8ljhkeFsO682JYQx/T5IlOrxToMLAs</code>
 
 ◇━━━━━━━━━━━━━━━━━◇
- • SFVPN TUNNELING • 
+ • PAINTECH VPN • 
 ◇━━━━━━━━━━━━━━━━━◇
 "
 else
@@ -152,16 +152,16 @@ tcp_ssl port : 8443
 Example config TCP_STD 8080
 ◇━━━━━━━━━━━━━━━━━◇
 
-<code>EB4cHVzsbaIHhGlETDO+Ck22fVlOm01SEuUAUWIilUiZj3ho/GZ5QY+Fdur7EGcHtimx0bRpPkPYSUVldGNLCXsFP3XfuuhmgsFMFK/RNdCJO1dF1LdAFlB4FSpoxofkIxg4/ot5WJVEGKPxuK7M3hm+93/8mTKR7LO196KrYbIcDbZtui7+g0u03le97wfPfnjHgd5YVflwaagi6T1PU2z5nXp0sLPrwKY5mdvmQu2QVAiMGE/ZqdjM1m2kcYDaecChWbLz4FiMVQBjEqa5G4h7zjBmxBtXFpWvOyApTfPIKK44eBHxKoLc7FXjaEFw7ONqexhB3svRPND1XR9VtkISZLEwrXQPPv1OO2pzOaS7unutCaP7pxQoTaChCn9Z2tN5tKDn8UsB/p8ouoLZPH4g83fYzO28dV2SC064+S3PLo6MlZxmlGuBUdhPuKgrfK+Rbejas7Z8GnCglJLUyTcwuynoFQiNVqiP64hMnvB9hSNl6YDQeST20ydA8dMIG7Jg8PJ52MRO5GIxNwl9y3ut7mPrn/+ia+rgoH+kz4mww6SBEy15TeXss7ZMYZcGj7A1vtTFOfCBvvqRgBxpQ6ZPcPX2+ohuC16/fQ==</code>
+<code>EP4K5Xir0hFH0Dr6ODkZjI9/qLRv/EPaVq5R9HDKsVTOWnZQ8wvQyocsCDPFuedq3CK5HCiDtSNnOl28XyudCjvb2OLpa8gL0Z397hRkiTGbWhbZW53Lln01/HkvrEL5OZLTSMqU4kCy11/9Iyta0tmDIUYyjgNBtmnDmwWMX0eAXtq5uzusq3upiulAJpisFhQvu0o7r2KF1MiSmTUOw/R8mgTpsf+arKnKmWdRNIkTSmhMLE3aD/I2Ke2FJtgHyVADBbj0S0W76XuSl39v3atM1OeuZ7mwxQwKpRfVJhWApiMV9Ho0ydANOK5BQJbhC2s38rGhk1E0A0Jw/XxNqd1a490n/FdHtfSev6BPaP6y0+xFUrr4U+H+ug+e/Avgaszd79w5VeUPK+YhWJOYiX/VnC6L9lKJ3m6OmjKXAmIF47C7lVTsosFz4IAbdqNqg9q7B1XKOiLBGUkGaZi89jQ/I6zS5+KRBv48KiQnUz6BRVQEjGl0FjP7zNR0BtfrGh1XF8EWDZMyCdw70+ydeIv+Z9VZRgNIPpvbTUeeqYYdAExEm9rtofvbodoNLJ06+n5yy1uDBt5rzzEb</code>
 
 ◇━━━━━━━━━━━━━━━━━◇
 Example config TCP_SSL 8443
 ◇━━━━━━━━━━━━━━━━━◇
 
-<code>EMLBHFZfH/pBoPKJNWEVgBpE6A5ZeWbnzpI4w7UFL3EEDLbefWsxq308yXcLl9+eH0CAwm6hLFDAIEZtscw6w090SyqPTK1iZxg/XVhQupV+3gkyTy/t3OeJcEGNfgOGuBGi5HVxQNiBrKIo8gQnVnR5oDVf80HbwVUHYNiayk9B8cqGRlr8bHTMs6GcevwhgWRUhOYitN20pcF91SXkQd86eIFfMVVFpM2MkRqOiL4+ZWS1GrH+r4YVC69Q50xyZAfUm+Ps17bY3hH7qcha1o2OD8RhjYqGnRzJDJEh7tfnDG6GyLgKPk+A8wxLkd+oTDKOMMsEyFA6x2NolzEYNYIsn5C2QBlEm5NAb8RJmCkFVL+L+ekiUp0NvkIRSjhVbhcl/n1CkBWkcOPYLCwyIagNJrCoD6vkoGzprqS3IAbj7RkOQqmLquAlfeEgDk6UJao/BZaoZeeIlfhDgfATDZiooLECs/h+0/2Vff1E5wnoHovDDo3FZW8xbxXXazHWdYWg8BOU3sATfhnbZd6uWsPmAg6r3jGynibibNbO1r/n88vbvB8Au319VN8KRLI4FhPc/Z9KG+njTJkmiLoG33SbPU7fF8AP</code>
+<code>EDN2OyxHptYxagbPw+cr7WjqSeEiEM3qJJOPRUu9B9Or+RpXrxnkf3FbEEB+gJGI2xYO6vGykvWv8h7wpkGNvqQTD8ZksoB7l6xz79DJxQg1VWBraNsMJjIguQa0my7x0TRm+RkLbU7QpONyU+YxijbzuBCpBSpNIDa2JPNHN5kuxoBvpasbJA+u8G9PZxuAh/UZXVWEGGehbxQFefkAp7WcFB1mGIArVYcbRZ3p8+m8BpKcspbfNblp0GSxFfayu19NZvSXXwQO5sVCiJ5KQdw+niUC8vRJNqYf+leIplDeeQvhbc7BMgYSznoEegcA/A8jSiRyTyp15O1zoeRxpE3naXlrkI3Xw7/VClS9KGqnHdHS0sHQqxmud1AqjSUsAsHAC/NTS3HrxUKoftqYQu4/qTQbYE/O7LtLky7lvgJgYJZRZiHXh8ETfS/i/A3XLpsx7zayzlDiw8IildWmm0t6Y13PPlhU+4tbfSjXTeO5BcqunbsH0pQoTS7Ojp2F0DqJgM3uVU6TL9A5YnViml3w8MKN5wLT9usIxQYVqf1boIuVDVmyY2BSYO8ljhkeFsO682JYQx/T5IlOrxToMLAs</code>
 
 ◇━━━━━━━━━━━━━━━━━◇
- • SFVPN TUNNELING • 
+ • PAINTECH VPN • 
 ◇━━━━━━━━━━━━━━━━━◇
 "
 fi
@@ -202,16 +202,16 @@ echo -e "◇━━━━━━━━━━━━━━━━━◇" | tee -a /et
 echo -e "Example config TCP_STD 8080" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
 echo -e "◇━━━━━━━━━━━━━━━━━◇" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
 echo "" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
-echo -e "EB4cHVzsbaIHhGlETDO+Ck22fVlOm01SEuUAUWIilUiZj3ho/GZ5QY+Fdur7EGcHtimx0bRpPkPYSUVldGNLCXsFP3XfuuhmgsFMFK/RNdCJO1dF1LdAFlB4FSpoxofkIxg4/ot5WJVEGKPxuK7M3hm+93/8mTKR7LO196KrYbIcDbZtui7+g0u03le97wfPfnjHgd5YVflwaagi6T1PU2z5nXp0sLPrwKY5mdvmQu2QVAiMGE/ZqdjM1m2kcYDaecChWbLz4FiMVQBjEqa5G4h7zjBmxBtXFpWvOyApTfPIKK44eBHxKoLc7FXjaEFw7ONqexhB3svRPND1XR9VtkISZLEwrXQPPv1OO2pzOaS7unutCaP7pxQoTaChCn9Z2tN5tKDn8UsB/p8ouoLZPH4g83fYzO28dV2SC064+S3PLo6MlZxmlGuBUdhPuKgrfK+Rbejas7Z8GnCglJLUyTcwuynoFQiNVqiP64hMnvB9hSNl6YDQeST20ydA8dMIG7Jg8PJ52MRO5GIxNwl9y3ut7mPrn/+ia+rgoH+kz4mww6SBEy15TeXss7ZMYZcGj7A1vtTFOfCBvvqRgBxpQ6ZPcPX2+ohuC16/fQ==" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
+echo -e "EP4K5Xir0hFH0Dr6ODkZjI9/qLRv/EPaVq5R9HDKsVTOWnZQ8wvQyocsCDPFuedq3CK5HCiDtSNnOl28XyudCjvb2OLpa8gL0Z397hRkiTGbWhbZW53Lln01/HkvrEL5OZLTSMqU4kCy11/9Iyta0tmDIUYyjgNBtmnDmwWMX0eAXtq5uzusq3upiulAJpisFhQvu0o7r2KF1MiSmTUOw/R8mgTpsf+arKnKmWdRNIkTSmhMLE3aD/I2Ke2FJtgHyVADBbj0S0W76XuSl39v3atM1OeuZ7mwxQwKpRfVJhWApiMV9Ho0ydANOK5BQJbhC2s38rGhk1E0A0Jw/XxNqd1a490n/FdHtfSev6BPaP6y0+xFUrr4U+H+ug+e/Avgaszd79w5VeUPK+YhWJOYiX/VnC6L9lKJ3m6OmjKXAmIF47C7lVTsosFz4IAbdqNqg9q7B1XKOiLBGUkGaZi89jQ/I6zS5+KRBv48KiQnUz6BRVQEjGl0FjP7zNR0BtfrGh1XF8EWDZMyCdw70+ydeIv+Z9VZRgNIPpvbTUeeqYYdAExEm9rtofvbodoNLJ06+n5yy1uDBt5rzzEb" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
 echo "" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
 echo -e "◇━━━━━━━━━━━━━━━━━◇" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
 echo -e "Example config TCP_SSL 8443" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
 echo -e "◇━━━━━━━━━━━━━━━━━◇" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
 echo "" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
-echo -e "EMLBHFZfH/pBoPKJNWEVgBpE6A5ZeWbnzpI4w7UFL3EEDLbefWsxq308yXcLl9+eH0CAwm6hLFDAIEZtscw6w090SyqPTK1iZxg/XVhQupV+3gkyTy/t3OeJcEGNfgOGuBGi5HVxQNiBrKIo8gQnVnR5oDVf80HbwVUHYNiayk9B8cqGRlr8bHTMs6GcevwhgWRUhOYitN20pcF91SXkQd86eIFfMVVFpM2MkRqOiL4+ZWS1GrH+r4YVC69Q50xyZAfUm+Ps17bY3hH7qcha1o2OD8RhjYqGnRzJDJEh7tfnDG6GyLgKPk+A8wxLkd+oTDKOMMsEyFA6x2NolzEYNYIsn5C2QBlEm5NAb8RJmCkFVL+L+ekiUp0NvkIRSjhVbhcl/n1CkBWkcOPYLCwyIagNJrCoD6vkoGzprqS3IAbj7RkOQqmLquAlfeEgDk6UJao/BZaoZeeIlfhDgfATDZiooLECs/h+0/2Vff1E5wnoHovDDo3FZW8xbxXXazHWdYWg8BOU3sATfhnbZd6uWsPmAg6r3jGynibibNbO1r/n88vbvB8Au319VN8KRLI4FhPc/Z9KG+njTJkmiLoG33SbPU7fF8AP" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
+echo -e "EDN2OyxHptYxagbPw+cr7WjqSeEiEM3qJJOPRUu9B9Or+RpXrxnkf3FbEEB+gJGI2xYO6vGykvWv8h7wpkGNvqQTD8ZksoB7l6xz79DJxQg1VWBraNsMJjIguQa0my7x0TRm+RkLbU7QpONyU+YxijbzuBCpBSpNIDa2JPNHN5kuxoBvpasbJA+u8G9PZxuAh/UZXVWEGGehbxQFefkAp7WcFB1mGIArVYcbRZ3p8+m8BpKcspbfNblp0GSxFfayu19NZvSXXwQO5sVCiJ5KQdw+niUC8vRJNqYf+leIplDeeQvhbc7BMgYSznoEegcA/A8jSiRyTyp15O1zoeRxpE3naXlrkI3Xw7/VClS9KGqnHdHS0sHQqxmud1AqjSUsAsHAC/NTS3HrxUKoftqYQu4/qTQbYE/O7LtLky7lvgJgYJZRZiHXh8ETfS/i/A3XLpsx7zayzlDiw8IildWmm0t6Y13PPlhU+4tbfSjXTeO5BcqunbsH0pQoTS7Ojp2F0DqJgM3uVU6TL9A5YnViml3w8MKN5wLT9usIxQYVqf1boIuVDVmyY2BSYO8ljhkeFsO682JYQx/T5IlOrxToMLAs" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
 echo "" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
 echo -e "◇━━━━━━━━━━━━━━━━━◇" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
-echo -e " • SFVPN TUNNELING •" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
+echo -e " • PAINTECH VPN •" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
 echo -e "◇━━━━━━━━━━━━━━━━━◇" | tee -a /etc/xray/noobz/akun/log-create-${user}.log
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
@@ -255,7 +255,7 @@ echo "$TEXT" > /etc/notiftele
 bash /etc/tele
 fi
 echo -e "$COLOR1╭══════════════════════ • ${WH}BY${NC}${COLOR1} • ═══════════════════════╮${NC}"
-echo -e "$COLOR1${NC}          ${WH}   • Satan Fusion Tunneling •                 $COLOR1 $NC"
+echo -e "$COLOR1${NC}          ${WH}   • PainTech Vpn Tuneling  •                 $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════════╯${NC}"
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
@@ -277,7 +277,7 @@ echo -e "$COLOR1╰════════════════════�
 echo "USERNAME: $user"
 echo "renew success!!"
 echo -e "$COLOR1╭══════════════════════ • ${WH}BY${NC}${COLOR1} • ═══════════════════════╮${NC}"
-echo -e "$COLOR1${NC}          ${WH}   • Satan Fusion Tunneling •                 $COLOR1 $NC"
+echo -e "$COLOR1${NC}          ${WH}   • PainTech Vpn Tuneling  •                 $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════════╯${NC}"
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
@@ -300,7 +300,7 @@ echo -e "$COLOR1╰════════════════════�
 echo "USERNAME: $user"
 echo "locked success!!"
 echo -e "$COLOR1╭══════════════════════ • ${WH}BY${NC}${COLOR1} • ═══════════════════════╮${NC}"
-echo -e "$COLOR1${NC}          ${WH}   • Satan Fusion Tunneling •                 $COLOR1 $NC"
+echo -e "$COLOR1${NC}          ${WH}   • PainTech Vpn Tuneling  •                 $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════════╯${NC}"
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
@@ -320,7 +320,7 @@ echo -e "$COLOR1╰════════════════════�
 noobzvpns --info-all-user | awk '/^\s*\+.*-> active/ {gsub(/(issued\(yyyymmdd\)|hash_key): [0-9a-f]+/, ""); print; getline; print; getline; getline; getline; print; print "═══════════════════"}'
 
 echo -e "$COLOR1╭══════════════════════ • ${WH}BY${NC}${COLOR1} • ═══════════════════════╮${NC}"
-echo -e "$COLOR1${NC}          ${WH}   • Satan Fusion Tunneling •                 $COLOR1 $NC"
+echo -e "$COLOR1${NC}          ${WH}   • PainTech Vpn Tuneling  •                 $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════════╯${NC}"
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
@@ -343,7 +343,7 @@ echo -e "$COLOR1╰════════════════════�
 echo "USERNAME: $user"
 echo "unlocked success!!"
 echo -e "$COLOR1╭══════════════════════ • ${WH}BY${NC}${COLOR1} • ═══════════════════════╮${NC}"
-echo -e "$COLOR1${NC}          ${WH}   • Satan Fusion Tunneling •                 $COLOR1 $NC"
+echo -e "$COLOR1${NC}          ${WH}   • PainTech Vpn Tuneling  •                 $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════════╯${NC}"
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
@@ -377,7 +377,7 @@ echo -e "$COLOR1╰════════════════════�
 echo "USERNAME: $user"
 echo "unlocked success!!"
 echo -e "$COLOR1╭══════════════════════ • ${WH}BY${NC}${COLOR1} • ═══════════════════════╮${NC}"
-echo -e "$COLOR1${NC}          ${WH}   • Satan Fusion Tunneling •                 $COLOR1 $NC"
+echo -e "$COLOR1${NC}          ${WH}   • PainTech Vpn Tuneling  •                 $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════════╯${NC}"
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
@@ -397,7 +397,7 @@ echo -e "$COLOR1│ $NC  ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}RENEW AK
 echo -e "$COLOR1│ $NC  ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}       ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}REMOVE ALL USER${NC}    $COLOR1 $NC"
 echo -e "$COLOR1╰═══════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════ • ${WH}BY${NC}${COLOR1} • ══════════════════════╮${NC}"
-echo -e "$COLOR1${NC}          ${WH}   • Satan Fusion Tunneling •                 $COLOR1 $NC"
+echo -e "$COLOR1${NC}          ${WH}   • PainTech Vpn Tuneling  •                 $COLOR1 $NC"
 echo -e "$COLOR1╰═══════════════════════════════════════════════════╯${NC}"
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
