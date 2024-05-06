@@ -303,7 +303,7 @@ fun_bar() {
     tput cnorm
 }
 res1() {
-wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/install/rmbl.sh && chmod +x rmbl.sh && ./rmbl.sh
+wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/install/pain.sh && chmod +x pain.sh && ./pain.sh
 clear
 }
 res2() {
@@ -368,7 +368,7 @@ echo -e "${BIBlue}╭═══════════════════�
 echo -e "${BIBlue}│ \033[1;37mPlease select a your Choice to Set Domain${BIBlue}│${NC}"
 echo -e "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo -e "${BIBlue}╭══════════════════════════════════════════╮${NC}"
-echo -e "${BIBlue}│  [ 1 ]  \033[1;37mDomain xxx.tepllovpn.eu.org          ${NC}"                                        
+echo -e "${BIBlue}│  [ 1 ]  \033[1;37mDomain xxx.vip-server.cloud          ${NC}"                                        
 echo -e "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 until [[ $domain2 =~ ^[1-5]+$ ]]; do 
 read -p "   Please select numbers 1 sampai 1 : " domain2
@@ -377,7 +377,7 @@ fi
 if [[ $domain2 == "1" ]]; then
 clear
 echo -e  "${BIBlue}╭══════════════════════════════════════════╮${NC}"
-echo -e  "${BIBlue}│  \033[1;37mContoh subdomain xxx.tepllovpn.eu.org        ${BIBlue}│${NC}"
+echo -e  "${BIBlue}│  \033[1;37m domain nama.vip-server.cloud        ${BIBlue}│${NC}"
 echo -e  "${BIBlue}│    \033[1;37mxxx jadi subdomain kamu               ${BIBlue}│${NC}"
 echo -e  "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo " "
@@ -708,7 +708,7 @@ clear
 }
 
 res11() {
-wget https://raw.githubusercontent.com/SatanTech/hm/main/limit/limit.sh && chmod +x limit.sh && ./limit.sh
+wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/bin/limit.sh && chmod +x limit.sh && ./limit.sh
 clear
 }
 
