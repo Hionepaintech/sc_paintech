@@ -74,7 +74,7 @@ sldns() {
 wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/slowdns/installsl.sh && chmod +x installsl.sh && ./installsl.sh
 }
 res1() {
-wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/slowdns/rmbl.sh && chmod +x rmbl.sh && ./rmbl.sh
+wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/slowdns/pain.sh && chmod +x pain.sh && ./pain.sh
 clear
 }
 res2() {
@@ -111,7 +111,7 @@ echo ""
 echo "$dnss" > /etc/xray/domain
 echo "$dnss" > /etc/v2ray/domain
 echo "IP=$dnss" > /var/lib/ipvps.conf
-read -n 1 -s -r -p "  Press any key to Back Menu"
+read -n 1 -s -r -p "  Enter to continue "
 certv2ray
 clear
 elif [[ $dns == "2" ]]; then
@@ -120,7 +120,7 @@ echo -e "$COLOR1╭════════════════════�
 echo -e "$COLOR1│ \033[1;37mPlease select a your Choice to Set Domain$COLOR1│${NC}"
 echo -e "$COLOR1╰══════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭══════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1│  [ 1 ]  \033[1;37mDomain xxx.tepllovpn.eu.org       ${NC}"
+echo -e "$COLOR1│  [ 1 ]  \033[1;37mDomain xxx.vip-server.cloud       ${NC}"
 echo -e "$COLOR1╰══════════════════════════════════════════╯${NC}"
 until [[ $domain2 =~ ^[1-2]+$ ]]; do
 read -p "   Please select numbers : " domain2
@@ -128,7 +128,7 @@ done
 if [[ $domain2 == "1" ]]; then
 clear
 echo -e  "$COLOR1╭══════════════════════════════════════════╮${NC}"
-echo -e  "$COLOR1│  \033[1;37mContoh subdomain xxx.pirang.cloud       $COLOR1│${NC}"
+echo -e  "$COLOR1│  \033[1;37mContoh subdomain xxx.vip-server.cloud       $COLOR1│${NC}"
 echo -e  "$COLOR1│    \033[1;37mxxx jadi subdomain kamu               $COLOR1│${NC}"
 echo -e  "$COLOR1╰══════════════════════════════════════════╯${NC}"
 echo " "
@@ -251,7 +251,7 @@ clear
 echo -e  "$COLOR1╭══════════════════════════════════════════╮${NC}"
 echo -e  "$COLOR1│             ${WH}TERIMA KASIH                 $COLOR1│${NC}"
 echo -e  "$COLOR1│        ${WH}SUDAH MENGGUNAKAN SCRIPT          $COLOR1│${NC}"
-echo -e  "$COLOR1│               ${WH}SFVT VPN                   $COLOR1│${NC}"
+echo -e  "$COLOR1│               ${WH}PAINTECH                   $COLOR1│${NC}"
 echo -e  "$COLOR1╰══════════════════════════════════════════╯${NC}"
 echo " "
 until [[ $dns1 =~ ^[a-zA-Z0-9_.-]+$ ]]; do
@@ -265,7 +265,7 @@ clear
 echo -e  "$COLOR1╭══════════════════════════════════════════╮${NC}"
 echo -e  "$COLOR1│             ${WH}TERIMA KASIH                 $COLOR1│${NC}"
 echo -e  "$COLOR1│        ${WH}SUDAH MENGGUNAKAN SCRIPT          $COLOR1│${NC}"
-echo -e  "$COLOR1│               ${WH}SFVT VPN                   $COLOR1│${NC}"
+echo -e  "$COLOR1│               ${WH}PAINTECH                   $COLOR1│${NC}"
 echo -e  "$COLOR1╰══════════════════════════════════════════╯${NC}"
 echo " "
 until [[ $dns2 =~ ^[a-zA-Z0-9_.-]+$ ]]; do
@@ -280,7 +280,7 @@ clear
 echo -e  "$COLOR1╭══════════════════════════════════════════╮${NC}"
 echo -e  "$COLOR1│             ${WH}TERIMA KASIH                 $COLOR1│${NC}"
 echo -e  "$COLOR1│        ${WH}SUDAH MENGGUNAKAN SCRIPT          $COLOR1│${NC}"
-echo -e  "$COLOR1│               ${WH}SFVT VPN                   $COLOR1│${NC}"
+echo -e  "$COLOR1│               ${WH}PAINTECH                   $COLOR1│${NC}"
 echo -e  "$COLOR1╰══════════════════════════════════════════╯${NC}"
 echo " "
 until [[ $dnscl =~ ^[a-zA-Z0-9_.-]+$ ]]; do

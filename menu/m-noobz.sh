@@ -224,15 +224,17 @@ echo -e "$COLOR1╭════════════════════�
 echo -e "$COLOR1│ ${NC}${COLBG1}              ${WH}• DELETE NOOBZ •                   ${NC}$COLOR1 │ $NC"
 echo -e "$COLOR1╰═══════════════════════════════════════════════════╯${NC}"
 grep -E "^### " "/etc/xray/noob" | cut -d ' ' -f 2-3 | nl -s ') '
-read -p "username :" user
+read -p "Masukkan nama pengguna yang ingin dihapus: " user
 noobzvpns --remove-user $user
-expi=`date -d "$exp days" +"%Y-%m-%d"`
+exp=$(grep -E "^### $user " "/etc/xray/noob" | cut -d ' ' -f 3)
+expi=$(date -d "$exp days" +"%Y-%m-%d")
+sed -i "/^### $user $exp/d" /etc/xray/noob
 clear
 echo -e "$COLOR1╭═══════════════════════════════════════════════════╮${NC}"
 echo -e "$COLOR1│ ${NC}${COLBG1}              ${WH}• DELETE NOOBZ •                   ${NC}$COLOR1 │ $NC"
 echo -e "$COLOR1╰═══════════════════════════════════════════════════╯${NC}"
 echo -e ""
-echo -e "$WH USERNAME $user HAS BEEN DELETE $NC"
+echo -e "$WH USERNAME $user HAS BEEN DELETED $NC"
 echo -e "$WH EXPIRED : $expi $NC"
 echo -e ""
 TEXT="
