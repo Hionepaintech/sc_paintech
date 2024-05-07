@@ -1,6 +1,6 @@
 #!/bin/bash
 # Ohp Script
-# Mod By RMBL VPN 
+# Mod By PainTech 
 # ==========================================
 # Color
 RED='\033[0;31m'
