@@ -20,10 +20,14 @@
 ````
 wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/menu/m-update.sh && chmod +x m-update.sh && ./m-update.sh
 ````
-
-####  Owner Hub
 <p align="center">
-  <a href="https://t.me/paintechvpn"><img src="https://img.icons8.com/color/48/000000/telegram-app--v1.png"/></a>
-  <a href="https://www.facebook.com/paintechvpn"><img src="https://img.icons8.com/color/48/000000/facebook-new.png"/></a>
-  <a href="https://wa.me/6281249063560"><img src="https://www.flaticon.com/free-icon/whatsapp_466966"/></a>
+  <img src="https://user-images.githubusercontent.com/76937659/153705486-44e6c1b2-74fa-4d44-be1c-36c8fdb83331.gif"/>
+</p>
+
+<p align="center"><img src="https://img.shields.io/badge/owner contact -success.svg">
+  
+<p align="center">
+  <a href="https://t.me/paintechvpn"><img src="https://img.icons8.com/color/30/000000/telegram-app--v1.png" alt="Telegram" style="margin-right: 15px;"></a>
+  <a href="https://www.facebook.com/paintechvpn"><img src="https://img.icons8.com/color/30/000000/facebook-new.png" alt="Facebook" style="margin-right: 15px;"></a>
+  <a href="https://wa.me/6281249063560"><img src="https://img.icons8.com/color/30/000000/whatsapp--v1.png" alt="WhatsApp"></a>
 </p>
