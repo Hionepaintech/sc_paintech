@@ -1,6 +1,6 @@
 #!/bin/bash
-MYIP=$(wget -qO- ipinfo.io/ip);
 
+MYIP=$(wget -qO- ipinfo.io/ip);
 colornow=$(cat /etc/rmbl/theme/color.conf)
 NC="\e[0m"
 COLOR1="$(cat /etc/rmbl/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
@@ -18,12 +18,12 @@ function add_ip(){
     echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
     echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
     echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-    rm -rf /root/rmbl
+    rm -rf /root/permission
     read -p "   NEW IPVPS : " daftar
     echo -e "$COLOR1 ${NC}"
     echo -e "$COLOR1 ${NC}  [INFO] Checking the IPVPS!"
     sleep 1
-    REQIP=$(curl -sS https://raw.githubusercontent.com/${USERGIT}/${REPOGIT}/main/ipmini | awk '{print $4}' | grep $daftar)
+    REQIP=$(curl -sS https://raw.githubusercontent.com/Hionepaintech/Licensing-/main/ipmini | awk '{print $4}' | grep $daftar)
     if [[ $daftar = $REQIP ]]; then
         echo -e "$COLOR1 ${NC}  [INFO] VPS IP Already Registered!!"
         echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
@@ -135,13 +135,14 @@ function add_ip(){
     read -n 1 -s -r -p "   Press any key to back on menu"
     m-ip
 }
+
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                ${WH}• PAINTECHVPN •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
-echo -e "   $COLOR1 [01]$NC • ADD IPVPS
-echo -e "   $COLOR1 [00]$NC • GO BACK
+echo -e "   $COLOR1 [01]$NC • ADD IPVPS"
+echo -e "    $COLOR1 [00]$NC • GO BACK"
 echo ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
 case $opt in
