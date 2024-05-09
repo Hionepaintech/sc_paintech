@@ -331,9 +331,9 @@ if [[ -e /etc/github/api ]]; then
 m-ip
 else
 mkdir /etc/github
-echo "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" > /etc/github/api
-echo "vpnrmbl@gmail.com" > /etc/github/email
-echo "RMBL-VPN" > /etc/github/username
+echo "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" > /etc/github/api
+echo "mr.ryuuko@gmail.com" > /etc/github/email
+echo "Hionepaintech" > /etc/github/username
 m-ip
 fi
 }
