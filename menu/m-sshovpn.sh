@@ -930,6 +930,9 @@ d1=$(date -d "$exp" +%s)
 d2=$(date -d "$now" +%s)
 exp2=$(( (d1 - d2) / 86400 ))
 if [[ "$exp2" -le "0" ]]; then
+Pengguna=$(grep -E "^### " "/etc/xray/ssh" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
+Days=$(grep -E "^### " "/etc/xray/ssh" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
+Pass=$(grep -E "^### " "/etc/xray/ssh" | cut -d ' ' -f 4 | sed -n "${CLIENT_NUMBER}"p)
 sed -i "/^### $user $exp $pass/d" /etc/xray/ssh
 if getent passwd $user > /dev/null 2>&1; then
 userdel $user > /dev/null 2>&1
@@ -939,32 +942,11 @@ rm /etc/xray/sshx/${user}IP >/dev/null 2>&1
 rm /etc/xray/sshx/${user}login >/dev/null 2>&1
 fi
 done
-data=( `cat /etc/xray/config.json | grep '^#vmg' | cut -d ' ' -f 2 | sort | uniq`);
-now=`date +"%Y-%m-%d"`
-for user in "${data[@]}"
-do
-exp=$(grep -w "^#vmg $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
-uuid=$(grep -w "^#vmg $user" "/etc/xray/config.json" | cut -d ' ' -f 4 | sort | uniq)
-d1=$(date -d "$exp" +%s)
-d2=$(date -d "$now" +%s)
-exp2=$(( (d1 - d2) / 86400 ))
-if [[ "$exp2" -le "0" ]]; then
-if [ ! -e /etc/vmess/akundelete ]; then
-echo "" > /etc/vmess/akundelete
-fi
-clear
-echo "### $user $exp $uuid" >> /etc/vmess/akundelete
-sed -i "/^#vmg $user $exp/,/^},{/d" /etc/xray/config.json
-sed -i "/^#vm $user $exp/,/^},{/d" /etc/xray/config.json
-rm -f /etc/xray/$user-tls.json /etc/xray/$user-none.json
-rm /home/vps/public_html/vmess-$user.txt >/dev/null 2>&1
-rm /etc/vmess/${user}IP >/dev/null 2>&1
-rm /etc/vmess/${user}login >/dev/null 2>&1
-fi
-done
     echo " "
     echo "--------------------------------------"
     echo "Script are successfully run"
+    read -n 1 -s -r -p "Press any key to back on menu"
+m-sshovpn
 }
 function limitssh(){
 cd
