@@ -581,7 +581,7 @@ case $opt in
 10 | 10) clear ; m-system ;;
 11 | 11) clear ; m-backup;;
 12 | 12) clear ; reboot ;;
-13 | 13) clear ; $ressee ;;
+13 | 13) clear ; m-ip2 ;;
 14 | 14) clear ; key ;;
 22 | 22) clear ; running;;
 23 | 23) clear ; restartservice ;;
