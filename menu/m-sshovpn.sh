@@ -918,7 +918,6 @@ function delxp() {
     clear
     echo "Thank you for removing the EXPIRED USERS"
     echo "--------------------------------------"
-rm trial*
 cd
 echo 1 > /proc/sys/vm/drop_caches
 data=( `cat /etc/xray/ssh | grep '^###' | cut -d ' ' -f 2 | sort | uniq`);
