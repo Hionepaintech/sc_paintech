@@ -918,32 +918,51 @@ function delxp() {
     clear
     echo "Thank you for removing the EXPIRED USERS"
     echo "--------------------------------------"
-    cat /etc/xray/ssh | cut -d: -f1,8 | sed /:$/d >/tmp/expirelist.txt
-    totalaccounts=$(cat /tmp/expirelist.txt | wc -l)
-    for ((i = 1; i <= $totalaccounts; i++)); do
-        tuserval=$(head -n $i /tmp/expirelist.txt | tail -n 1)
-        username=$(echo $tuserval | cut -f1 -d:)
-        userexp=$(echo $tuserval | cut -f2 -d:)
-        userexpireinseconds=$(($userexp * 86400))
-        tglexp=$(date -d @$userexpireinseconds)
-        tgl=$(echo $tglexp | awk -F" " '{print $3}')
-        while [ ${#tgl} -lt 2 ]; do
-            tgl="0"$tgl
-        done
-        while [ ${#username} -lt 15 ]; do
-            username=$username" "
-        done
-        bulantahun=$(echo $tglexp | awk -F" " '{print $2,$6}')
-        echo "echo "Expired- User : $username Expire at : $tgl $bulantahun"" >>/usr/local/bin/alluser
-        todaystime=$(date +%s)
-        if [ $userexpireinseconds -ge $todaystime ]; then
-            :
-        else
-            echo "echo "Expired- Username : $username are expired at: $tgl $bulantahun and removed : $hariini "" >>/usr/local/bin/deleteduser
-            echo "Username $username that are expired at $tgl $bulantahun removed from the VPS $hariini"
-            userdel -f $username
-        fi
-    done
+rm trial*
+cd
+echo 1 > /proc/sys/vm/drop_caches
+data=( `cat /etc/xray/ssh | grep '^###' | cut -d ' ' -f 2 | sort | uniq`);
+now=`date +"%Y-%m-%d"`
+for user in "${data[@]}"
+do
+pass=$(grep -w "^### $user" "/etc/xray/ssh" | cut -d ' ' -f 4 | sort | uniq)
+exp=$(grep -w "^### $user" "/etc/xray/ssh" | cut -d ' ' -f 3 | sort | uniq)
+d1=$(date -d "$exp" +%s)
+d2=$(date -d "$now" +%s)
+exp2=$(( (d1 - d2) / 86400 ))
+if [[ "$exp2" -le "0" ]]; then
+sed -i "/^### $user $exp $pass/d" /etc/xray/ssh
+if getent passwd $user > /dev/null 2>&1; then
+userdel $user > /dev/null 2>&1
+fi
+rm /home/vps/public_html/ssh-$user.txt >/dev/null 2>&1
+rm /etc/xray/sshx/${user}IP >/dev/null 2>&1
+rm /etc/xray/sshx/${user}login >/dev/null 2>&1
+fi
+done
+data=( `cat /etc/xray/config.json | grep '^#vmg' | cut -d ' ' -f 2 | sort | uniq`);
+now=`date +"%Y-%m-%d"`
+for user in "${data[@]}"
+do
+exp=$(grep -w "^#vmg $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
+uuid=$(grep -w "^#vmg $user" "/etc/xray/config.json" | cut -d ' ' -f 4 | sort | uniq)
+d1=$(date -d "$exp" +%s)
+d2=$(date -d "$now" +%s)
+exp2=$(( (d1 - d2) / 86400 ))
+if [[ "$exp2" -le "0" ]]; then
+if [ ! -e /etc/vmess/akundelete ]; then
+echo "" > /etc/vmess/akundelete
+fi
+clear
+echo "### $user $exp $uuid" >> /etc/vmess/akundelete
+sed -i "/^#vmg $user $exp/,/^},{/d" /etc/xray/config.json
+sed -i "/^#vm $user $exp/,/^},{/d" /etc/xray/config.json
+rm -f /etc/xray/$user-tls.json /etc/xray/$user-none.json
+rm /home/vps/public_html/vmess-$user.txt >/dev/null 2>&1
+rm /etc/vmess/${user}IP >/dev/null 2>&1
+rm /etc/vmess/${user}login >/dev/null 2>&1
+fi
+done
     echo " "
     echo "--------------------------------------"
     echo "Script are successfully run"
