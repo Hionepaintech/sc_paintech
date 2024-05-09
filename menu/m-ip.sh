@@ -36,6 +36,9 @@ uis="${COLOR1}Premium Version$NC"
 fi
 }
 
+dos2unix /usr/bin/m-ip
+chmod +x /usr/bin/m-ip
+
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                ${WH}• PAINTECHVPN •${NC}                 $COLOR1 $NC"
