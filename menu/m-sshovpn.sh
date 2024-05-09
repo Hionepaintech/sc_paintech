@@ -914,6 +914,40 @@ echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 m-sshovpn
 }
+function delxp() {
+    clear
+    echo "Thank you for removing the EXPIRED USERS"
+    echo "--------------------------------------"
+    cat /etc/shadow | cut -d: -f1,8 | sed /:$/d >/tmp/expirelist.txt
+    totalaccounts=$(cat /tmp/expirelist.txt | wc -l)
+    for ((i = 1; i <= $totalaccounts; i++)); do
+        tuserval=$(head -n $i /tmp/expirelist.txt | tail -n 1)
+        username=$(echo $tuserval | cut -f1 -d:)
+        userexp=$(echo $tuserval | cut -f2 -d:)
+        userexpireinseconds=$(($userexp * 86400))
+        tglexp=$(date -d @$userexpireinseconds)
+        tgl=$(echo $tglexp | awk -F" " '{print $3}')
+        while [ ${#tgl} -lt 2 ]; do
+            tgl="0"$tgl
+        done
+        while [ ${#username} -lt 15 ]; do
+            username=$username" "
+        done
+        bulantahun=$(echo $tglexp | awk -F" " '{print $2,$6}')
+        echo "echo "Expired- User : $username Expire at : $tgl $bulantahun"" >>/usr/local/bin/alluser
+        todaystime=$(date +%s)
+        if [ $userexpireinseconds -ge $todaystime ]; then
+            :
+        else
+            echo "echo "Expired- Username : $username are expired at: $tgl $bulantahun and removed : $hariini "" >>/usr/local/bin/deleteduser
+            echo "Username $username that are expired at $tgl $bulantahun removed from the VPS $hariini"
+            userdel -f $username
+        fi
+    done
+    echo " "
+    echo "--------------------------------------"
+    echo "Script are successfully run"
+}
 function limitssh(){
 cd
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/ssh")
@@ -1188,7 +1222,7 @@ echo -e " $COLOR1│ $NC  ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}ADD AKU
 echo -e " $COLOR1│ $NC  ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}TRIAL AKUN${NC}      ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}CEK USER CONFIG${NC}    $COLOR1│ $NC"
 echo -e " $COLOR1│ $NC  ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}RENEW AKUN${NC}      ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}CHANGE IP LIMIT${NC}    $COLOR1│ $NC"
 echo -e " $COLOR1│ $NC  ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}DELETE AKUN${NC}     ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}SETTING LOCK LOGIN${NC} $COLOR1│ $NC"
-echo -e " $COLOR1│ $NC  ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}         ${WH}[${COLOR1}09${WH}]${NC} ${COLOR1}• ${WH}UNLOCK LOGIN${NC}      $COLOR1 │$NC"
+echo -e " $COLOR1│ $NC  ${WH}[${COLOR1}11${WH}]${NC} ${COLOR1}• ${WH}DELETE XP${NC}         ${WH}[${COLOR1}09${WH}]${NC} ${COLOR1}• ${WH}UNLOCK LOGIN${NC}      $COLOR1 │$NC"
 echo -e " $COLOR1╰════════════════════════════════════════════════════╯${NC}"
 echo -e " $COLOR1╭═════════════════════════ ${WH}BY${NC} ${COLOR1}═══════════════════════╮ ${NC}"
 echo -e "  $COLOR1${NC}              ${WH}   • $author •                 $COLOR1 $NC"
@@ -1206,6 +1240,7 @@ case $opt in
 08 | 8) clear ; listssh ; exit ;;
 09 | 9) clear ; lockssh ; exit ;;
 10 | 10) clear ; hapuslama ; exit ;;
+11| 11) clear ; delxp ; exit ;;
 00 | 0) clear ; menu ; exit ;;
 X  | 0) clear ; m-sshovpn ;;
 x) exit ;;
