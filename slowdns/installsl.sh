@@ -44,6 +44,7 @@ ns_domain_cloudflare() {
 	echo $NS_DOMAIN >/etc/xray/dns
 }
 
+setup_dnstt() {
 apt update -y
 apt install -y python3 python3-dnslib net-tools
 apt install ncurses-utils -y
@@ -64,7 +65,6 @@ apt install -y dos2unix debconf-utils
 service cron reload
 service cron restart
 
-#tambahan port openssh
 cd
 echo "Port 2222" >> /etc/ssh/sshd_config
 echo "Port 2269" >> /etc/ssh/sshd_config
@@ -74,11 +74,11 @@ service sshd restart
 
 #konfigurasi slowdns
 rm -rf /etc/slowdns
-mkdir -m 777 /etc/slowdns
-wget -q -O /etc/slowdns/server.key "https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/server.key"
-wget -q -O /etc/slowdns/server.pub "https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/server.pub"
-wget -q -O /etc/slowdns/sldns-server "https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/sldns-server"
-wget -q -O /etc/slowdns/sldns-client "https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/sldns-client"
+mkdir -p /etc/slowdns
+wget -q -O /etc/slowdns/server.key "https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main /slowdns/server.key"
+wget -q -O /etc/slowdns/server.pub "https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main /slowdns/server.pub"
+wget -q -O /etc/slowdns/sldns-server "https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main /slowdns/sldns-server"
+wget -q -O /etc/slowdns/sldns-client "https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main /slowdns/sldns-client"
 cd
 chmod +x /etc/slowdns/server.key
 chmod +x /etc/slowdns/server.pub
@@ -86,15 +86,15 @@ chmod +x /etc/slowdns/sldns-server
 chmod +x /etc/slowdns/sldns-client
 
 cd
-#wget -q -O /etc/systemd/system/client-sldns.service "https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/client-sldns.service"
-#wget -q -O /etc/systemd/system/server-sldns.service "https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/server-sldns.service"
+#wget -q -O /etc/systemd/system/client-sldns.service "https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main /slowdns/client-sldns.service"
+#wget -q -O /etc/systemd/system/server-sldns.service "https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main /slowdns/server-sldns.service"
 
 cd
 #install client-sldns.service
 cat > /etc/systemd/system/client-sldns.service << END
 [Unit]
-Description=Client SlowDNS By HideSSH
-Documentation=https://hidessh.com
+Description=Client SlowDNS Mod  
+Documentation=https://t.me/paintechvpn
 After=network.target nss-lookup.target
 
 [Service]
@@ -114,8 +114,8 @@ cd
 #install server-sldns.service
 cat > /etc/systemd/system/server-sldns.service << END
 [Unit]
-Description=Server SlowDNS By HideSSH
-Documentation=https://hidessh.com
+Description=Server SlowDNS Mod  
+Documentation=https://t.me/paintechvpn
 After=network.target nss-lookup.target
 
 [Service]
@@ -151,6 +151,7 @@ systemctl start server-sldns
 
 systemctl restart client-sldns
 systemctl restart server-sldns
-
+}
 ns_domain_cloudflare
+setup_dnstt
 exit
