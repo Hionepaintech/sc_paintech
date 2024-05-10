@@ -1,28 +1,52 @@
 #!/bin/bash
-# FIxX SLOWDNS OFF
 # ===============================================
+ns_domain_cloudflare() {
+	DOMAIN="vip-server.cloud"
+	DOMAIN_PATH=$(cat /etc/xray/domain)
+	SUB=$(tr </dev/urandom -dc a-z0-9 | head -c7)
+	SUB_DOMAIN=${SUB}".vip-server.cloud"
+	NS_DOMAIN=ns.${SUB_DOMAIN}
+	CF_ID=mrbaru34@gmail.com
+        CF_KEY=76f26fda668bb7e670eb5f6bfb7d065e57e88
+	set -euo pipefail
+	IP=$(wget -qO- ipinfo.io/ip)
+	echo "Updating DNS NS for ${NS_DOMAIN}..."
+	ZONE=$(
+		curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
+		-H "X-Auth-Email: ${CF_ID}" \
+		-H "X-Auth-Key: ${CF_KEY}" \
+		-H "Content-Type: application/json" | jq -r .result[0].id
+	)
 
+	RECORD=$(
+		curl -sLX GET "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records?name=${NS_DOMAIN}" \
+		-H "X-Auth-Email: ${CF_ID}" \
+		-H "X-Auth-Key: ${CF_KEY}" \
+		-H "Content-Type: application/json" | jq -r .result[0].id
+	)
 
-#setting IPtables
-iptables -I INPUT -p udp --dport 5300 -j ACCEPT
-iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
-netfilter-persistent save
-netfilter-persistent reload
+	if [[ "${#RECORD}" -le 10 ]]; then
+		RECORD=$(
+			curl -sLX POST "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records" \
+			-H "X-Auth-Email: ${CF_ID}" \
+			-H "X-Auth-Key: ${CF_KEY}" \
+			-H "Content-Type: application/json" \
+			--data '{"type":"NS","name":"'${NS_DOMAIN}'","content":"'${DOMAIN_PATH}'","proxied":false}' | jq -r .result.id
+		)
+	fi
 
-cd
-#delete directory
-rm -rf /root/nsdomain
-rm nsdomain
+	RESULT=$(
+		curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records/${RECORD}" \
+		-H "X-Auth-Email: ${CF_ID}" \
+		-H "X-Auth-Key: ${CF_KEY}" \
+		-H "Content-Type: application/json" \
+		--data '{"type":"NS","name":"'${NS_DOMAIN}'","content":"'${DOMAIN_PATH}'","proxied":false}'
+	)
+	echo $NS_DOMAIN >/etc/xray/dns
+}
 
-#input nameserver manual to cloudflare
-read -rp "Masukkan domain: " -e domain
-
-read -rp "Masukkan Subdomain: " -e sub
-SUB_DOMAIN=${sub}.${domain}
-NS_DOMAIN=slowdns-${SUB_DOMAIN}
-echo $NS_DOMAIN > /root/nsdomain
-
-nameserver=$(cat /root/nsdomain)
+setup_dnstt() {
+nameserver=$(cat /etc/xray/dns)
 apt update -y
 apt install -y python3 python3-dnslib net-tools
 apt install ncurses-utils -y
@@ -53,11 +77,12 @@ service sshd restart
 
 #konfigurasi slowdns
 rm -rf /etc/slowdns
-mkdir -m 777 /etc/slowdns
-wget -q -O /etc/slowdns/server.key "https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/server.key"
-wget -q -O /etc/slowdns/server.pub "https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/server.pub"
-wget -q -O /etc/slowdns/sldns-server "https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/sldns-server"
-wget -q -O /etc/slowdns/sldns-client "https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/sldns-client"
+cd
+mkdir -p /etc/slowdns
+wget -q -O /etc/slowdns/server.key "https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/slowdns/server.key"
+wget -q -O /etc/slowdns/server.pub "https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/slowdns/server.pub"
+wget -q -O /etc/slowdns/sldns-server "https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/slowdns/sldns-server"
+wget -q -O /etc/slowdns/sldns-client "https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/slowdns/sldns-client"
 cd
 chmod +x /etc/slowdns/server.key
 chmod +x /etc/slowdns/server.pub
@@ -65,15 +90,15 @@ chmod +x /etc/slowdns/sldns-server
 chmod +x /etc/slowdns/sldns-client
 
 cd
-#wget -q -O /etc/systemd/system/client-sldns.service "https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/client-sldns.service"
-#wget -q -O /etc/systemd/system/server-sldns.service "https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/server-sldns.service"
+#wget -q -O /etc/systemd/system/client-sldns.service "https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/slowdns/client-sldns.service"
+#wget -q -O /etc/systemd/system/server-sldns.service "https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/slowdns/server-sldns.service"
 
 cd
 #install client-sldns.service
 cat > /etc/systemd/system/client-sldns.service << END
 [Unit]
-Description=Client SlowDNS By HideSSH
-Documentation=https://hidessh.com
+Description=Client 
+Documentation=https://t.me/paintechvpn
 After=network.target nss-lookup.target
 
 [Service]
@@ -93,8 +118,8 @@ cd
 #install server-sldns.service
 cat > /etc/systemd/system/server-sldns.service << END
 [Unit]
-Description=Server SlowDNS By HideSSH
-Documentation=https://hidessh.com
+Description=Server SlowDNs
+Documentation=https://t.me/paintechvpn
 After=network.target nss-lookup.target
 
 [Service]
@@ -110,7 +135,6 @@ Restart=on-failure
 WantedBy=multi-user.target
 END
 
-#permission service slowdns
 cd
 chmod +x /etc/systemd/system/client-sldns.service
 
@@ -130,3 +154,8 @@ systemctl start server-sldns
 
 systemctl restart client-sldns
 systemctl restart server-sldns
+}
+
+ns_domain_cloudflare
+setup_dnstt
+exit
