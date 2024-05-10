@@ -1037,7 +1037,7 @@ cd
 echo "installing insaller Slowdns "
 echo "Progress..."
 echo "Sedang berlangsung..."
-wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/slowdns/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
+wget https://raw.githubusercontent.com/hidessh99/autoscript-ssh-slowdns/main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
 sleep 1
 
 echo -e "[ ${green}INFO${NC} ] DONE... ALAT"
@@ -1046,6 +1046,7 @@ echo "Progress..."
 echo "Sedang berlangsung..."
 sleep 3
 
+clear
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
 }
