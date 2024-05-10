@@ -55,7 +55,15 @@ ns_domain_cloudflare() {
 	echo $NS_DOMAIN >/etc/xray/dns
 }
 
+# Membuat file /etc/xray/dns
+touch /etc/xray/dns
+
+# Menjalankan fungsi ns_domain_cloudflare untuk menetapkan nilai NSDomain
+ns_domain_cloudflare
+
+# Membaca nilai NSDomain dari file /etc/xray/dns
 nameserver=$(cat /etc/xray/dns)
+
 apt update -y
 apt install -y python3 python3-dnslib net-tools
 apt install ncurses-utils -y
@@ -163,7 +171,5 @@ systemctl start server-sldns
 
 systemctl restart client-sldns
 systemctl restart server-sldns
-
-ns_domain_cloudflare
 
 exit
