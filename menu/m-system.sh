@@ -1032,6 +1032,23 @@ fi
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
 }
+function sldns(){
+cd
+echo "installing insaller Slowdns "
+echo "Progress..."
+echo "Sedang berlangsung..."
+wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/slowdns/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
+sleep 1
+
+echo -e "[ ${green}INFO${NC} ] DONE... ALAT"
+sleep 1
+echo "Progress..."
+echo "Sedang berlangsung..."
+sleep 3
+
+read -n 1 -s -r -p "Press any key to back on menu"
+menu
+}
 function speed2(){
 apt install -y neofecth >/dev/null
 clear
@@ -1067,7 +1084,7 @@ case $opt in
 03 |3) clear ; auto-reboot ; exit ;;
 04 |4) clear ; bw ; exit ;;
 05 |5) clear ; m-webmin ; exit ;;
-06 |6) clear ; wget https://raw.githubusercontent.com/hidessh99/autoscript-ssh-slowdns/main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh ; exit ;;
+06 |6) clear ; sldns ; exit ;;
 07 |7) clear ; m-theme ; exit ;;
 08 |8) clear ; limitspeed ; exit ;;
 09 |9) clear ; nano /etc/issue.net ; exit ;;
