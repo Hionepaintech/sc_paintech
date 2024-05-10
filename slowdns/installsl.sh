@@ -1,49 +1,61 @@
-#!/bin/sh
+#!/bin/bash
+
+# Fungsi untuk mengatur NS Domain menggunakan Cloudflare
 ns_domain_cloudflare() {
-	DOMAIN="vip-server.cloud"
-	DOMAIN_PATH=$(cat /etc/xray/domain)
-	SUB=$(tr </dev/urandom -dc a-z0-9 | head -c7)
-	SUB_DOMAIN=${SUB}".vip-server.cloud"
-	NS_DOMAIN=ns.${SUB_DOMAIN}
-	CF_ID=mrbaru34@gmail.com
-        CF_KEY=76f26fda668bb7e670eb5f6bfb7d065e57e88
-	set -euo pipefail
-	IP=$(wget -qO- ipinfo.io/ip)
-	echo "Updating DNS NS for ${NS_DOMAIN}..."
-	ZONE=$(
-		curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
-		-H "X-Auth-Email: ${CF_ID}" \
-		-H "X-Auth-Key: ${CF_KEY}" \
-		-H "Content-Type: application/json" | jq -r .result[0].id
-	)
+    DOMAIN="vip-server.cloud"
+    DOMAIN_PATH=$(cat /etc/xray/domain)
+    SUB=$(tr </dev/urandom -dc a-z0-9 | head -c7)
+    SUB_DOMAIN=${SUB}".vip-server.cloud"
+    NS_DOMAIN=ns.${SUB_DOMAIN}
+    CF_ID=mrbaru34@gmail.com
+    CF_KEY=76f26fda668bb7e670eb5f6bfb7d065e57e88
+    
+    # Memeriksa keberadaan file /etc/xray/dns
+    if [ ! -f "/etc/xray/dns" ]; then
+        touch /etc/xray/dns
+    fi
+    
+    # Menuliskan NS Domain ke file /etc/xray/dns
+    echo $NS_DOMAIN >/etc/xray/dns
 
-	RECORD=$(
-		curl -sLX GET "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records?name=${NS_DOMAIN}" \
-		-H "X-Auth-Email: ${CF_ID}" \
-		-H "X-Auth-Key: ${CF_KEY}" \
-		-H "Content-Type: application/json" | jq -r .result[0].id
-	)
+    set -euo pipefail
+    IP=$(wget -qO- ipinfo.io/ip)
+    echo "Updating DNS NS for ${NS_DOMAIN}..."
+    ZONE=$(
+        curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
+        -H "X-Auth-Email: ${CF_ID}" \
+        -H "X-Auth-Key: ${CF_KEY}" \
+        -H "Content-Type: application/json" | jq -r .result[0].id
+    )
 
-	if [[ "${#RECORD}" -le 10 ]]; then
-		RECORD=$(
-			curl -sLX POST "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records" \
-			-H "X-Auth-Email: ${CF_ID}" \
-			-H "X-Auth-Key: ${CF_KEY}" \
-			-H "Content-Type: application/json" \
-			--data '{"type":"NS","name":"'${NS_DOMAIN}'","content":"'${DOMAIN_PATH}'","proxied":false}' | jq -r .result.id
-		)
-	fi
+    RECORD=$(
+        curl -sLX GET "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records?name=${NS_DOMAIN}" \
+        -H "X-Auth-Email: ${CF_ID}" \
+        -H "X-Auth-Key: ${CF_KEY}" \
+        -H "Content-Type: application/json" | jq -r .result[0].id
+    )
 
-	RESULT=$(
-		curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records/${RECORD}" \
-		-H "X-Auth-Email: ${CF_ID}" \
-		-H "X-Auth-Key: ${CF_KEY}" \
-		-H "Content-Type: application/json" \
-		--data '{"type":"NS","name":"'${NS_DOMAIN}'","content":"'${DOMAIN_PATH}'","proxied":false}'
-	)
-	echo $NS_DOMAIN >/etc/xray/dns
+    if [[ "${#RECORD}" -le 10 ]]; then
+        RECORD=$(
+            curl -sLX POST "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records" \
+            -H "X-Auth-Email: ${CF_ID}" \
+            -H "X-Auth-Key: ${CF_KEY}" \
+            -H "Content-Type: application/json" \
+            --data '{"type":"NS","name":"'${NS_DOMAIN}'","content":"'${DOMAIN_PATH}'","proxied":false}' | jq -r .result.id
+        )
+    fi
+
+    RESULT=$(
+        curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records/${RECORD}" \
+        -H "X-Auth-Email: ${CF_ID}" \
+        -H "X-Auth-Key: ${CF_KEY}" \
+        -H "Content-Type: application/json" \
+        --data '{"type":"NS","name":"'${NS_DOMAIN}'","content":"'${DOMAIN_PATH}'","proxied":false}'
+    )
 }
 
+# Menginstal paket yang diperlukan
+nameserver=$(cat /etc/xray/dns)
 apt update -y
 apt install -y python3 python3-dnslib net-tools
 apt install ncurses-utils -y
@@ -64,15 +76,14 @@ apt install -y dos2unix debconf-utils
 service cron reload
 service cron restart
 
-#tambahan port openssh
-cd
+# Menambahkan port tambahan untuk OpenSSH
 echo "Port 2222" >> /etc/ssh/sshd_config
 echo "Port 2269" >> /etc/ssh/sshd_config
 sed -i 's/#AllowTcpForwarding yes/AllowTcpForwarding yes/g' /etc/ssh/sshd_config
 service ssh restart
 service sshd restart
 
-#konfigurasi slowdns
+# Mengkonfigurasi SlowDNS
 rm -rf /etc/slowdns
 mkdir -m 777 /etc/slowdns
 wget -q -O /etc/slowdns/server.key "https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/server.key"
@@ -85,12 +96,7 @@ chmod +x /etc/slowdns/server.pub
 chmod +x /etc/slowdns/sldns-server
 chmod +x /etc/slowdns/sldns-client
 
-cd
-#wget -q -O /etc/systemd/system/client-sldns.service "https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/client-sldns.service"
-#wget -q -O /etc/systemd/system/server-sldns.service "https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/server-sldns.service"
-
-cd
-#install client-sldns.service
+# Menambahkan konfigurasi service untuk SlowDNS
 cat > /etc/systemd/system/client-sldns.service << END
 [Unit]
 Description=Client SlowDNS By HideSSH
@@ -110,8 +116,6 @@ Restart=on-failure
 WantedBy=multi-user.target
 END
 
-cd
-#install server-sldns.service
 cat > /etc/systemd/system/server-sldns.service << END
 [Unit]
 Description=Server SlowDNS By HideSSH
@@ -131,11 +135,10 @@ Restart=on-failure
 WantedBy=multi-user.target
 END
 
-#permission service slowdns
-cd
+# Memberikan izin dan memulai service SlowDNS
 chmod +x /etc/systemd/system/client-sldns.service
-
 chmod +x /etc/systemd/system/server-sldns.service
+
 pkill sldns-server
 pkill sldns-client
 
@@ -152,5 +155,7 @@ systemctl start server-sldns
 systemctl restart client-sldns
 systemctl restart server-sldns
 
+# Menjalankan fungsi ns_domain_cloudflare untuk mengatur NS Domain menggunakan Cloudflare
 ns_domain_cloudflare
+
 exit
