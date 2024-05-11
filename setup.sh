@@ -307,11 +307,11 @@ wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/install/pa
 clear
 }
 res2() {
-wget https://raw.githubusercontent.com/RMBL-VPN/v1/main/install/r1.sh && chmod +x cr1.sh && ./per1.sh
+wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/install/pain1.sh && chmod +x pain1.sh && ./pain1.sh
 clear
 }
 res3() {
-wget https://raw.githubusercontent.com/RMBL-VPN/v1/main/install/c2.sh && chmod +x c2.sh && ./cr2.sh
+wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/install/pain2.sh && chmod +x pain2.sh && ./pain2.sh
 clear
 }
 res4() {
@@ -369,15 +369,17 @@ echo -e "${BIBlue}│ \033[1;37mPlease select a your Choice to Set Domain${BIBlu
 echo -e "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo -e "${BIBlue}╭══════════════════════════════════════════╮${NC}"
 echo -e "${BIBlue}│  [ 1 ]  \033[1;37mDomain xxx.vip-server.cloud          ${NC}"                                        
+echo -e "${BIBlue}│  [ 2 ]  \033[1;37mDomain xnxx.paintech.shop          ${NC}"                                        
+echo -e "${BIBlue}│  [ 3 ]  \033[1;37mDomain xxx.isppaintechidn.cloud          ${NC}"                                        
 echo -e "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 until [[ $domain2 =~ ^[1-5]+$ ]]; do 
-read -p "   Please select numbers 1 sampai 1 : " domain2
+read -p "   Please select numbers 1 sampai 3 : " domain2
 done
 fi
 if [[ $domain2 == "1" ]]; then
 clear
 echo -e  "${BIBlue}╭══════════════════════════════════════════╮${NC}"
-echo -e  "${BIBlue}│  \033[1;37m domain nama.vip-server.cloud        ${BIBlue}│${NC}"
+echo -e  "${BIBlue}│  \033[1;37mContoh subdomain xxx.vip-server.cloud        ${BIBlue}│${NC}"
 echo -e  "${BIBlue}│    \033[1;37mxxx jadi subdomain kamu               ${BIBlue}│${NC}"
 echo -e  "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo " "
@@ -407,7 +409,7 @@ rm /root/subdomainx
 elif [[ $domain2 == "2" ]]; then
 clear
 echo -e  "${BIBlue}╭══════════════════════════════════════════╮${NC}"
-echo -e  "${BIBlue}│  \033[1;37mContoh subdomain xxx.vpnvip.app         ${BIBlue}│${NC}"
+echo -e  "${BIBlue}│  \033[1;37mContoh subdomain xxx.paintech.shop         ${BIBlue}│${NC}"
 echo -e  "${BIBlue}│    \033[1;37mxxx jadi subdomain kamu               ${BIBlue}│${NC}"
 echo -e  "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo " "
@@ -437,7 +439,7 @@ rm /root/subdomainx
 elif [[ $domain2 == "3" ]]; then
 clear
 echo -e  "${BIBlue}╭══════════════════════════════════════════╮${NC}"
-echo -e  "${BIBlue}│  \033[1;37mContoh subdomain xxx.slowapp.cfd        ${BIBlue}│${NC}"
+echo -e  "${BIBlue}│  \033[1;37mContoh subdomain xxx.isppaintechidn.cloud        ${BIBlue}│${NC}"
 echo -e  "${BIBlue}│    \033[1;37mxxx jadi subdomain kamu               ${BIBlue}│${NC}"
 echo -e  "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo " "
@@ -688,7 +690,7 @@ clear
 }
 
 res8() {
-wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/slowdns/installsl.sh && chmod +x installsl.sh && bash installsl.sh
+wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/slowdns/installsl.sh && chmod +x installsl.sh && sudo apt update && sudo apt install dos2unix && dos2unix installsl.sh && ./installsl.sh
 clear
 }
 
