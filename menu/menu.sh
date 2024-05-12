@@ -443,7 +443,7 @@ echo -e " $COLOR1│$NC ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}VMESS    
 echo -e " $COLOR1│$NC ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}VLESS     ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}09${WH}]${NC} ${COLOR1}• ${WH}UPDATE     ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}"   
 echo -e " $COLOR1│$NC ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}TROJAN    ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}10${WH}]${NC} ${COLOR1}• ${WH}SYSTEM     ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}" 
 echo -e " $COLOR1│$NC ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}NOOBZVPNS ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}11${WH}]${NC} ${COLOR1}• ${WH}BACKUP     ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}" 
-echo -e " $COLOR1│$NC ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}BOT AKUN  ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}12${WH}]${NC} ${COLOR1}• ${WH}REBOOT     ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}" 
+echo -e " $COLOR1│$NC ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}BOT AKUN  ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}12${WH}]${NC} ${COLOR1}• ${WH}DELLXP     ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}" 
 echo -e " $COLOR1│$NC ${WH}[${COLOR1}22${WH}]${NC} ${COLOR1}• ${WH}RUNNING   ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}23${WH}]${NC} ${COLOR1}• ${WH}RESTART    ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}"
 echo -e " $COLOR1╰════════════════════════════════════════════════════════╯${NC}"
 if [ "$Isadmin" = "ON" ]; then
@@ -562,8 +562,8 @@ chmod +x install_up.sh
 }
 function xp(){
     clear
-    echo "DELATE ALL EXPIRED USERS"
-    echo "-------------------------------------------------"
+    echo "SUCCESSFULLY DELETE ALL EXPIRED ACCOUNT "
+    echo "---------------------------------------------"
 cd
 echo 1 > /proc/sys/vm/drop_caches
 data=( `cat /etc/xray/ssh | grep '^###' | cut -d ' ' -f 2 | sort | uniq`);
@@ -711,10 +711,8 @@ fi
 done
 systemctl reload ssh
 
-echo " "
-    echo "-------------------------------------------------"
-    echo "successfully delete all expired"
     read -n 1 -s -r -p "Press any key to back on menu"
+    menu
 }
 echo -e "$COLOR1╭═════════════════════════════════════════════════════════╮${NC}"
 echo -e "$COLOR1│$NC ${WH} ❈ Versi   ${NC}: ${WH}$(cat /opt/.ver) Version${NC}$COLOR1"
@@ -736,12 +734,12 @@ case $opt in
 09 | 9) clear ; m-update ;;
 10 | 10) clear ; m-system ;;
 11 | 11) clear ; m-backup;;
-12 | 12) clear ; reboot ;;
+12 | 12) clear ; xp ;;
 13 | 13) clear ; m-ip2 ;;
 14 | 14) clear ; key ;;
 22 | 22) clear ; running;;
 23 | 23) clear ; restartservice ;;
-89 | 89) clear ; xp ;;
+89 | 89) clear ; reboot ;;
 88 | 88) clear ; new ;;
 77 | 77) clear ; newx ;;
 100) clear ; $up2u ;;
