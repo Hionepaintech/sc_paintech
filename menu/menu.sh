@@ -1,5 +1,6 @@
 #!/bin/bash
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
+cpu_usage=$(mpstat 1 1 | awk '$12 ~ /[0-9.]+/ {print $12}')
 MYIP=$(wget -qO- ifconfig.me)
 colornow=$(cat /etc/rmbl/theme/color.conf)
 export NC="\e[0m"
@@ -407,6 +408,7 @@ fi
 menu
 }
 clear
+cpu_usage=$(mpstat 1 1 | awk '$12 ~ /[0-9.]+/ {print $12}')
 clear && clear && clear
 clear;clear;clear
 echo -e " $COLOR1╭══════════════════════════════════════════════════════════╮${NC}"
@@ -421,6 +423,7 @@ echo -e " $COLOR1│$NC${WH} ❈ UPTIME        ${COLOR1}: ${WH}$uphours $upminut
 echo -e " $COLOR1│$NC${WH} ❈ ISP           ${COLOR1}: ${WH}$ISP${NC}"
 echo -e " $COLOR1│$NC${WH} ❈ City          ${COLOR1}: ${WH}$CITY${NC}"
 echo -e " $COLOR1│$NC${WH} ❈ IP VPS        ${COLOR1}: ${WH}$MYIP${NC}"
+echo -e " $COLOR1│$NC${WH} ❈ CPU Usage     ${COLOR1}: ${WH}$cpu_usage${NC}"
 echo -e " $COLOR1│$NC${WH} ❈ DOMAIN        ${COLOR1}: ${WH}$(cat /etc/xray/domain)"
 echo -e " $COLOR1│$NC${WH} ❈ NSDomain      ${COLOR1}: ${WH}$(cat /etc/xray/dns)"
 echo -e " $COLOR1╰══════════════════════════════════════════════════════════╯${NC}"
