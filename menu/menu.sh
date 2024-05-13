@@ -439,7 +439,7 @@ echo -e " $COLOR1│$NC${WH} ❈ NSDomain      ${COLOR1}: ${WH}$(cat /etc/xray/d
 echo -e " $COLOR1╰══════════════════════════════════════════════════════════╯${NC}"
 echo -e " $COLOR1╭══════════════════════════════════════════════════════════╮${NC}"
 echo -e " $COLOR1│$NC  ${WH}Status    $COLOR1│${NC} ${WH}SSH WS/WSS :${status_ws} ${WH}V2RAY :${status_xray} ${WH}NOOBZVPN :${stat_noobz}${NC}"
-echo -e " $COLOR1│$NC ${WH} Server     $COLOR1│${NC} ${WH}UDP CUSTOM :${status_udp} ${WH}NGINX :${status_nginx} ${WH}DROPBEAR :${status_beruangjatuh}${NC}"
+echo -e " $COLOR1│$NC ${WH} Server    $COLOR1│${NC} ${WH}UDP CUSTOM :${status_udp} ${WH}NGINX :${status_nginx} ${WH}DROPBEAR :${status_beruangjatuh}${NC}"
 echo -e " $COLOR1╰══════════════════════════════════════════════════════════╯${NC}"
 echo -e " $COLOR1╭══════════════════════════════════════════════════════════╮${NC}"
 echo -e " $COLOR1│$NC  ${WH}Total    $COLOR1│${NC}     ${WH}SSH/OPVN    = ${COLOR1}$total_ssh  ${WH}VMESS    =  ${COLOR1}$vmess  ${WH}NOOBZ = ${COLOR1}$jumlah_noobz${NC}"
