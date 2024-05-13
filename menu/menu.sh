@@ -423,7 +423,7 @@ echo -e " $COLOR1│$NC${WH} ❈ UPTIME        ${COLOR1}: ${WH}$uphours $upminut
 echo -e " $COLOR1│$NC${WH} ❈ ISP           ${COLOR1}: ${WH}$ISP${NC}"
 echo -e " $COLOR1│$NC${WH} ❈ City          ${COLOR1}: ${WH}$CITY${NC}"
 echo -e " $COLOR1│$NC${WH} ❈ IP VPS        ${COLOR1}: ${WH}$MYIP${NC}"
-echo -e " $COLOR1│$NC${WH} ❈ CPU Usage     ${COLOR1}: ${WH}$cpu_usage${NC}"
+echo -e " $COLOR1│$NC${WH} ❈ CPU Usage     ${COLOR1}: ${WH}$cpu_usage%${NC}"
 echo -e " $COLOR1│$NC${WH} ❈ DOMAIN        ${COLOR1}: ${WH}$(cat /etc/xray/domain)"
 echo -e " $COLOR1│$NC${WH} ❈ NSDomain      ${COLOR1}: ${WH}$(cat /etc/xray/dns)"
 echo -e " $COLOR1╰══════════════════════════════════════════════════════════╯${NC}"
