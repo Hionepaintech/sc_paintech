@@ -1,6 +1,5 @@
 #!/bin/bash
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
-cpu_usage=$(mpstat 1 1 | awk '$12 ~ /[0-9.]+/ {print $12}')
 MYIP=$(wget -qO- ifconfig.me)
 colornow=$(cat /etc/rmbl/theme/color.conf)
 export NC="\e[0m"
@@ -27,6 +26,11 @@ ipsaya=$(wget -qO- ifconfig.me)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
 data_ip="https://raw.githubusercontent.com/Hionepaintech/Licensing-/main/ipmini"
+sudo apt-get update
+sudo apt-get install sysstat
+cpu_usage=$(mpstat 1 1 | awk '$12 ~ /[0-9.]+/ {print $12}')
+cpu_usage=$(echo $cpu_usage | tr -d '\n')
+cpu_load=$(uptime | awk -F'load average:' '{print $2}' | cut -d, -f1)
 checking_sc() {
 useexp=$(curl -sS $data_ip | grep $ipsaya | awk '{print $3}')
 if [[ $date_list < $useexp ]]; then
