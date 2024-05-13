@@ -303,7 +303,19 @@ else
     systemctl start udp-custom
 fi
 
+stunnel_service=$(/etc/init.d/stunnel4 status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+if [[ $stunnel_service == "running" ]]; then
+   status_stunnel=" ${GREEN}ON${NC}"
+else
+   status_stunnel="${RED}OFF${NC}"
+fi
 
+slc=$(systemctl status client-sldns | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+if [[ $slc == "running" ]]; then 
+   slc=" ${GREEN}ON${NC}"
+else
+   slc="${RED}OFF${NC}"
+fi
 
 # STATUS EXPIRED ACTIVE
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[4$below" && Font_color_suffix="\033[0m"
@@ -413,7 +425,7 @@ cpu_usage=$(mpstat 1 1 | awk '$12 ~ /[0-9.]+/ {print $12}')
 clear && clear && clear
 clear;clear;clear
 echo -e " $COLOR1╭══════════════════════════════════════════════════════════╮${NC}"
-echo -e " $COLOR1│${NC} ${COLBG1}                ${WH}⛩ PAINTECH TUNNLING ⛩                 ${NC} $COLOR1│ $NC"
+echo -e " $COLOR1│${NC} ${COLBG1}                ${WH} ⛩ PAINTECH VPN TUNEL ⛩                ${NC} $COLOR1│ $NC"
 echo -e " $COLOR1╰══════════════════════════════════════════════════════════╯${NC}"
 echo -e " $COLOR1╭══════════════════════════════════════════════════════════╮${NC}"
 echo -e " $COLOR1│$NC${WH} ❈ OS            ${COLOR1}: ${WH}$MODEL2${NC}"
@@ -426,14 +438,13 @@ echo -e " $COLOR1│$NC${WH} ❈ DOMAIN        ${COLOR1}: ${WH}$(cat /etc/xray/d
 echo -e " $COLOR1│$NC${WH} ❈ NSDomain      ${COLOR1}: ${WH}$(cat /etc/xray/dns)"
 echo -e " $COLOR1╰══════════════════════════════════════════════════════════╯${NC}"
 echo -e " $COLOR1╭══════════════════════════════════════════════════════════╮${NC}"
-echo -e " $COLOR1│$NC${WH}SSH WS : ${status_ws} ${WH} XRAY : ${status_xray} ${WH} NGINX : ${status_nginx} ${WH} DROPBEAR : ${status_beruangjatuh}$NC"
-echo -e " $COLOR1│$NC${WH} UDP CUSTOM : ${status_udp} ${WH} NOOBZVPNS : ${stat_noobz} ${WH} STUNEL4 : ${status_stunnel}${NC}"
+echo -e " $COLOR1│$NC${WH}SSH WS/WSS  : ${status_ws} ${WH} X'RAY V2RAY  : ${status_xray} ${WH} NGINX'     : ${status_nginx}       ${WH} DROPBEAR : ${status_beruangjatuh}$NC"
+echo -e " $COLOR1│$NC${WH}UDP CUSTOM : ${status_udp} ${WH} NOOBZVPNS : ${stat_noobz} ${WH} STUNEL4 : ${status_stunnel} ${WH} SLOW'DNS     : ${slc}${NC}"   
 echo -e " $COLOR1╰══════════════════════════════════════════════════════════╯${NC}"
-echo -e " $COLOR1╭════════════════════════════════════════════╮${NC}"
-echo -e " $COLOR1│$NC ${WH}SSH/OPVPN   = ${COLOR1}$total_ssh ${NC}${WH} ACCOUNT ${NC}          ${WH}VMESS/WS    = ${COLOR1}$vmess ${NC}${WH} ACCOUNT ${NC} $COLOR1│${NC}"
-echo -e " $COLOR1│$NC ${WH}VLESS/WS    = ${COLOR1}$vless ${NC}${WH} ACCOUNT ${NC}          ${WH}TROJAN/GRPC = ${COLOR1}$trtls ${NC}${WH} ACCOUNT${NC}          $COLOR1│${NC}"
-echo -e " $COLOR1│$NC ${WH}NOOBZVPNS   = ${COLOR1}$jumlah_noobz ${NC}${WH} ACCOUNT${NC}          ${NC}${WH}TROJAN /GO  = ${COLOR1}$jumlah_noobz ${NC}${WH} ACCOUNT${NC} $COLOR1│${NC}"
-echo -e " $COLOR1╰═════════════════════════════════════════════╯${NC}"
+echo -e " $COLOR1╭══════════════════════════════════════════════════════════╮${NC}"
+echo -e " $COLOR1│$NC  ${WH}Total    $COLOR1│${NC}     ${WH}SSH/OPVN    = ${COLOR1}$total_ssh  ${WH}VMESS    =  ${COLOR1}$vmess  ${WH}NOOBZ = ${COLOR1}$jumlah_noobz${NC}"
+echo -e " $COLOR1│$NC ${WH}Akun Vpn  $COLOR1│${NC}     ${WH}TROJAN      = ${COLOR1}$trtls  ${WH}VLESS    =  ${COLOR1}$vless${NC}"
+echo -e " $COLOR1╰══════════════════════════════════════════════════════════╯${NC}"
 echo -e " $COLOR1╭════════════════════════════════════════════════════════╮${NC}"
 echo -e " $COLOR1│$NC ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}SSH-WS    ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}NOTIF BOT  ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}"
 echo -e " $COLOR1│$NC ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}VMESS     ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}THEMES     ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}"    
