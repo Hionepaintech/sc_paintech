@@ -443,7 +443,7 @@ echo -e " $COLOR1│$NC ${WH}Servers.  $COLOR1│${NC} ${WH}UDP CUSTOM :${status
 echo -e " $COLOR1╰══════════════════════════════════════════════════════════╯${NC}"
 echo -e " $COLOR1╭══════════════════════════════════════════════════════════╮${NC}"
 echo -e " $COLOR1│$NC  ${WH}Total    $COLOR1│${NC} ${WH}SSH/OPVN  = ${COLOR1}$total_ssh   ${WH}VMESS  = ${COLOR1}$vmess  ${WH}TROJAN = ${COLOR1}$trtls${NC}"
-echo -e " $COLOR1│$NC ${WH}Akun Vpn  $COLOR1│${NC} ${WH}NOOBZVPN  = ${COLOR1}$jumlah_noobz   ${WH}VLESS  = ${COLOR1}$vless${NC}"
+echo -e " $COLOR1│$NC ${WH}Akun Vpn  $COLOR1│${NC} ${WH}NOOBZVPN  = ${COLOR1}$jumlah_noobz${WH}VLESS  = ${COLOR1}$vless${NC}"
 echo -e " $COLOR1╰══════════════════════════════════════════════════════════╯${NC}"
 echo -e " $COLOR1╭════════════════════════════════════════════════════════╮${NC}"
 echo -e " $COLOR1│$NC ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}SSH-WS    ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}NOTIF BOT  ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}"
