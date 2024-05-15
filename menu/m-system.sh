@@ -71,7 +71,7 @@ echo -e "\033[0;33m]\033[1;37m -\033[1;32m Succes !\033[1;37m"
 tput cnorm
 }
 sldns() {
-wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/slowdns/installsl.sh && chmod +x installsl.sh && ./installsl.sh
+wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/slowdns/installsl.sh && chmod +x installsl.sh && sudo apt update && sudo apt install dos2unix && dos2unix installsl.sh && ./installsl.sh
 }
 res1() {
 wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/slowdns/pain.sh && chmod +x pain.sh && ./pain.sh
@@ -121,6 +121,7 @@ echo -e "$COLOR1│ \033[1;37mPlease select a your Choice to Set Domain$COLOR1�
 echo -e "$COLOR1╰══════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭══════════════════════════════════════════╮${NC}"
 echo -e "$COLOR1│  [ 1 ]  \033[1;37mDomain xxx.vip-server.cloud       ${NC}"
+echo -e "$COLOR1│  [ 2 ]  \033[1;37mDomain xxx.isppaintechidn.cloud       ${NC}"
 echo -e "$COLOR1╰══════════════════════════════════════════╯${NC}"
 until [[ $domain2 =~ ^[1-2]+$ ]]; do
 read -p "   Please select numbers : " domain2
@@ -148,7 +149,7 @@ fi
 if [[ $domain2 == "2" ]]; then
 clear
 echo -e  "$COLOR1╭══════════════════════════════════════════╮${NC}"
-echo -e  "$COLOR1│  \033[1;37mContoh subdomain xxx.vip-server.cloud      $COLOR1│${NC}"
+echo -e  "$COLOR1│  \033[1;37mContoh domain x.isppaintechidn.cloud      $COLOR1│${NC}"
 echo -e  "$COLOR1│    \033[1;37mxxx jadi subdomain kamu               $COLOR1│${NC}"
 echo -e  "$COLOR1╰══════════════════════════════════════════╯${NC}"
 echo " "
