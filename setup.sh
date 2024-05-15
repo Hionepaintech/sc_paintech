@@ -369,17 +369,16 @@ echo -e "${BIBlue}│ \033[1;37mPlease select a your Choice to Set Domain${BIBlu
 echo -e "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo -e "${BIBlue}╭══════════════════════════════════════════╮${NC}"
 echo -e "${BIBlue}│  [ 1 ]  \033[1;37mDomain xxx.vip-server.cloud          ${NC}"                                        
-echo -e "${BIBlue}│  [ 2 ]  \033[1;37mDomain xnxx.paintech.shop          ${NC}"                                        
-echo -e "${BIBlue}│  [ 3 ]  \033[1;37mDomain xxx.isppaintechidn.cloud          ${NC}"                                        
+echo -e "${BIBlue}│  [ 2 ]  \033[1;37mDomain xxx.isppaintechidn.cloud          ${NC}"                                        
 echo -e "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 until [[ $domain2 =~ ^[1-5]+$ ]]; do 
-read -p "   Please select numbers 1 sampai 3 : " domain2
+read -p "   Please select numbers 1 sampai 2 : " domain2
 done
 fi
 if [[ $domain2 == "1" ]]; then
 clear
 echo -e  "${BIBlue}╭══════════════════════════════════════════╮${NC}"
-echo -e  "${BIBlue}│  \033[1;37mContoh subdomain xxx.vip-server.cloud        ${BIBlue}│${NC}"
+echo -e  "${BIBlue}│  \033[1;37mContoh domain xxx.vip-server.cloud        ${BIBlue}│${NC}"
 echo -e  "${BIBlue}│    \033[1;37mxxx jadi subdomain kamu               ${BIBlue}│${NC}"
 echo -e  "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo " "
@@ -409,7 +408,7 @@ rm /root/subdomainx
 elif [[ $domain2 == "2" ]]; then
 clear
 echo -e  "${BIBlue}╭══════════════════════════════════════════╮${NC}"
-echo -e  "${BIBlue}│  \033[1;37mContoh subdomain xxx.paintech.shop         ${BIBlue}│${NC}"
+echo -e  "${BIBlue}│  \033[1;37mdomain xxx.isppaintechidn.cloud         ${BIBlue}│${NC}"
 echo -e  "${BIBlue}│    \033[1;37mxxx jadi subdomain kamu               ${BIBlue}│${NC}"
 echo -e  "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo " "
@@ -439,7 +438,7 @@ rm /root/subdomainx
 elif [[ $domain2 == "3" ]]; then
 clear
 echo -e  "${BIBlue}╭══════════════════════════════════════════╮${NC}"
-echo -e  "${BIBlue}│  \033[1;37mContoh subdomain xxx.isppaintechidn.cloud        ${BIBlue}│${NC}"
+echo -e  "${BIBlue}│  \033[1;37mdomain xxx.isppaintechidn.cloud        ${BIBlue}│${NC}"
 echo -e  "${BIBlue}│    \033[1;37mxxx jadi subdomain kamu               ${BIBlue}│${NC}"
 echo -e  "${BIBlue}╰══════════════════════════════════════════╯${NC}"
 echo " "
