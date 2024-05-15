@@ -1,11 +1,11 @@
 #!/bin/bash
 apt install jq curl -y
-DOMAIN=berurat.cloud
+DOMAIN=isppaintechidn.cloud
 sub=$(cat /root/subdomainx)
-dns=${sub}.berurat.cloud
-dns2=*.${sub}.berurat.cloud
-CF_ID=kadeknovi148@gmail.com
-CF_KEY=45c11fd84f3ee1ce33070b0b653044e33b051
+dns=${sub}.isppaintechidn.cloud
+dns2=*.${sub}.isppaintechidn.cloud
+CF_ID=mrbaru34@gmail.com
+CF_KEY=76f26fda668bb7e670eb5f6bfb7d065e57e88
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS for ${dns}..."
@@ -43,12 +43,12 @@ echo $dns > /root/domain
 echo "$dns" > /etc/xray/domain
 echo "$dn!������MYIP=$(wget -qO- icanhazip.com);
 apt install jq curl -y
-DOMAIN=berurat.cloud
+DOMAIN=isppaintechidn.cloud
 sub=$(cat /root/subdomainx)
-dns=${sub}.berurat.cloud
-dns2=*.${sub}.berurat.cloud
-CF_ID=kadeknovi148@gmail.com
-CF_KEY=45c11fd84f3ee1ce33070b0b653044e33b051
+dns=${sub}.isppaintechidn.cloud
+dns2=*.${sub}.isppaintechidn.cloud
+CF_ID=mrbaru34@gmail.com
+CF_KEY=76f26fda668bb7e670eb5f6bfb7d065e57e88
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS for ${dns}..."
