@@ -119,7 +119,7 @@ Port OpenSSH     : 22
 Port Dropbear    : 143, 109
 Port SSH WS      : 80, 8080
 Port SSH SSL WS  : 443
-Port SSL/TLS     : 8443, 8880
+Port SSL/TLS     : 777, 222
 Port OVPN WS SSL : 2086
 Port OVPN SSL    : 990
 Port OVPN TCP    : 1194
@@ -135,7 +135,7 @@ _______________________________
 HTTP COSTUM : $domen:80@$Login:$Pass
 _______________________________
 Payload WS/WSS   :
-GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]
+GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]
 _______________________________
 OpenVPN SSL      : http://$domen:89/ssl.ovpn
 OpenVPN TCP      : http://$domen:89/tcp.ovpn
@@ -159,7 +159,7 @@ Port OpenSSH    :  22
 Port Dropbear    :  109, 143
 Port SSH WS     :  80, 8080
 Port SSH SSL WS :  443
-Port SSL/TLS     :  8443,8880
+Port SSL/TLS     :  777,222
 Port OVPN WS SSL :  2086
 Port OVPN SSL    :  990
 Port OVPN TCP    :  1194
@@ -176,7 +176,7 @@ Port Slowdns     :  80, 443, 53
 Pub Key          :  <code> $slkey</code>
 ◇━━━━━━━━━━━━━━━━━◇
 Payload WS/WSS   :
-<code>GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]</code>
+<code>GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]</code>
 ◇━━━━━━━━━━━━━━━━━◇
 OpenVPN SSL      :  http://$domen:89/ssl.ovpn
 OpenVPN TCP      :  http://$domen:89/tcp.ovpn
@@ -204,7 +204,7 @@ Port OpenSSH    :  22
 Port Dropbear    :  109, 143
 Port SSH WS     :  80, 8080
 Port SSH SSL WS :  443
-Port SSL/TLS     :  8443,8880
+Port SSL/TLS     :  777,222
 Port OVPN WS SSL :  2086
 Port OVPN SSL    :  990
 Port OVPN TCP    :  1194
@@ -221,7 +221,7 @@ Port Slowdns     :  80, 443, 53
 Pub Key          :  <code> $slkey</code>
 ◇━━━━━━━━━━━━━━━━━◇
 Payload WS/WSS   :
-<code>GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]</code>
+<code>GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]</code>
 ◇━━━━━━━━━━━━━━━━━◇
 OpenVPN SSL      :  http://$domen:89/ssl.ovpn
 OpenVPN TCP      :  http://$domen:89/tcp.ovpn
@@ -273,7 +273,7 @@ echo -e "$COLOR1 $NC  ${WH}OpenSSH    ${COLOR1}: ${WH}22" | tee -a /etc/xray/ssh
 echo -e "$COLOR1 $NC  ${WH}Dropbear   ${COLOR1}: ${WH}109, 143" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}SSH-WS     ${COLOR1}: ${WH}80,8080" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}SSH-SSL-WS ${COLOR1}: ${WH}443" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}SSL/TLS    ${COLOR1}: ${WH}8443,8880" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}SSL/TLS    ${COLOR1}: ${WH}777,222" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}Ovpn Ws    ${COLOR1}: ${WH}2086" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}Port TCP   ${COLOR1}: ${WH}1194" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}Port UDP   ${COLOR1}: ${WH}2200,1-65535" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
@@ -292,7 +292,7 @@ echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}
 echo -e "$COLOR1 $NC  ${WH}HTTP COSTUM${COLOR1}: ${WH}$domen:80@$Login:$Pass" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ${NC}  ${WH}Payload WS/WSS${COLOR1}: ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1${NC}${WH}GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1${NC}${WH}GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ${NC}  ${WH}Save Link Acount    : " | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ${NC}  ${WH}http://$domen:89/ssh-$Login.txt${NC}$COLOR1 $NC" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
@@ -363,7 +363,7 @@ Port OpenSSH     : 22
 Port Dropbear    : 143, 109
 Port SSH WS      : 80, 8080
 Port SSH SSL WS  : 443
-Port SSL/TLS     : 8443, 8880
+Port SSL/TLS     : 777, 222
 Port OVPN WS SSL : 2086
 Port OVPN SSL    : 990
 Port OVPN TCP    : 1194
@@ -378,8 +378,8 @@ SSH UDP VIRAL : $domen:1-65535@$Login:$Pass
 _______________________________
 HTTP COSTUM : $domen:80@$Login:$Pass
 _______________________________
-Payload WS/WSS   :
-GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]
+Payload WS  :
+GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]
 _______________________________
 OpenVPN SSL      : http://$domen:89/ssl.ovpn
 OpenVPN TCP      : http://$domen:89/tcp.ovpn
@@ -403,7 +403,7 @@ Port OpenSSH    :  22
 Port Dropbear    :  109, 143
 Port SSH WS     :  80, 8080
 Port SSH SSL WS :  443
-Port SSL/TLS     :  8443,8880
+Port SSL/TLS     :  777,222
 Port OVPN WS SSL :  2086
 Port OVPN SSL    :  990
 Port OVPN TCP    :  1194
@@ -420,7 +420,7 @@ Port Slowdns     :  80, 443, 53
 Pub Key          :  <code> $slkey</code>
 ◇━━━━━━━━━━━━━━━━━◇
 Payload WS/WSS   :
-<code>GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]</code>
+<code>GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]</code>
 ◇━━━━━━━━━━━━━━━━━◇
 OpenVPN SSL      :  http://$domen:89/ssl.ovpn
 OpenVPN TCP      :  http://$domen:89/tcp.ovpn
@@ -448,7 +448,7 @@ Port OpenSSH    :  22
 Port Dropbear    :  109, 143
 Port SSH WS     :  80, 8080
 Port SSH SSL WS :  443
-Port SSL/TLS     :  8443,8880
+Port SSL/TLS     :  777,222
 Port OVPN WS SSL :  2086
 Port OVPN SSL    :  990
 Port OVPN TCP    :  1194
@@ -465,7 +465,7 @@ Port Slowdns     :  80, 443, 53
 Pub Key          :  <code> $slkey</code>
 ◇━━━━━━━━━━━━━━━━━◇
 Payload WS/WSS   :
-<code>GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]</code>
+<code>GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]</code>
 ◇━━━━━━━━━━━━━━━━━◇
 OpenVPN SSL      :  http://$domen:89/ssl.ovpn
 OpenVPN TCP      :  http://$domen:89/tcp.ovpn
@@ -506,7 +506,7 @@ echo -e "$COLOR1 $NC  ${WH}OpenSSH    ${COLOR1}: ${WH}22" | tee -a /etc/xray/ssh
 echo -e "$COLOR1 $NC  ${WH}Dropbear   ${COLOR1}: ${WH}109, 143" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}SSH-WS     ${COLOR1}: ${WH}80,8080" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}SSH-SSL-WS ${COLOR1}: ${WH}443" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}SSL/TLS    ${COLOR1}: ${WH}8443,8880" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}SSL/TLS    ${COLOR1}: ${WH}777,222" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}Ovpn Ws    ${COLOR1}: ${WH}2086" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}Port TCP   ${COLOR1}: ${WH}1194" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}Port UDP   ${COLOR1}: ${WH}2200,1-65535" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
@@ -525,7 +525,7 @@ echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}
 echo -e "$COLOR1 $NC  ${WH}HTTP COSTUM${COLOR1}: ${WH}$domen:80@$Login:$Pass" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ${NC}  ${WH}Payload WS/WSS${COLOR1}: ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1${NC}${WH}GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1${NC}${WH}GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ${NC}  ${WH}Save Link Acount    : " | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ${NC}  ${WH}http://$domen:89/ssh-$Login.txt${NC}$COLOR1 $NC" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
