@@ -73,10 +73,6 @@ until [[ $masaaktif =~ ^[0-9]+$ ]]; do
 read -p "Expired (hari): " masaaktif
 done
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
-sed -i '/#vmess$/a\#vm '"$user $exp"'\
-},{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/config.json
-sed -i '/#vmessgrpc$/a\#vmg '"$user $exp $uuid"'\
-},{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/config.json
 until [[ $iplim =~ ^[0-9]+$ ]]; do
 read -p "Limit User (IP) or 0 Unlimited: " iplim
 done
@@ -462,12 +458,7 @@ user=Trial-`</dev/urandom tr -dc X-Z0-9 | head -c4`
 iplim=1
 Quota=10
 uuid=$(cat /proc/sys/kernel/random/uuid)
-masaaktif=1
-exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
-sed -i '/#vmess$/a\#vm '"$user $exp"'\
-},{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/config.json
-sed -i '/#vmessgrpc$/a\#vmg '"$user $exp $uuid"'\
-},{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/config.json
+masaaktif=0
 if [ ! -e /etc/vmess ]; then
 mkdir -p /etc/vmess
 fi
