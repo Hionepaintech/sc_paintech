@@ -858,7 +858,7 @@ iinfo
 rm -rf *
 echo -e "${BIBlue}╭════════════════════════════════════════════╮${NC}"
 echo -e "${BIBlue}│ ${BGCOLOR} INSTALL SCRIPT SELESAI..                 ${NC}${BIBlue} │${NC}"
-echo -e "${BIBlue}╰════════════════════════════════════════════╯${NC}"/
+echo -e "${BIBlue}╰════════════════════════════════════════════╯${NC}"
 echo  ""
 sleep 4
 echo -e "[ ${yell}WARNING${NC} ] Do you want to reboot now ? (y/n)? "; read answer
