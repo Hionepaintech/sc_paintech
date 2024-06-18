@@ -13,7 +13,8 @@ API_TOKEN = '6439511942:AAGjzHz3sA3gcUiLbHdLipC5JjwMUUdpUMg'
 GITHUB_USER = 'Hionepaintech'
 GITHUB_REPO = 'Licensing-'
 GITHUB_FILE_PATH = 'ipmini'
-GITHUB_TOKEN = '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'
+GITHUB_TOKEN = 'ghp_n0v3r5h4r3d3d'
+# Pastikan untuk mengganti token di atas dengan token GitHub yang baru
 
 async def start(update: Update, context: CallbackContext) -> None:
     await update.message.reply_text('Hii ini adalah bot @paintechvpn\nSilahkan gunakan /menu untuk cek daftar bot nya.')
@@ -115,3 +116,4 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
+        
