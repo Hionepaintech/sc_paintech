@@ -3,7 +3,7 @@ import logging
 import requests
 from datetime import datetime, timedelta
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, CallbackContext, JobQueue
+from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, CallbackContext
 
 # Set up logging
 logging.basicConfig(
@@ -119,7 +119,7 @@ def button(update: Update, context: CallbackContext) -> None:
 
 def main():
     # Create the Updater and pass it your bot's token.
-    updater = Updater(token=TOKEN, use_context=True)
+    updater = Updater(use_context=True)
     
     # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
