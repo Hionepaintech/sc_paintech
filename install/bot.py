@@ -12,12 +12,14 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# Your bot token
+TOKEN = '6439511942:AAGjzHz3sA3gcUiLbHdLipC5JjwMUUdpUMg'
+
 # Your GitHub token and repository info
 GITHUB_TOKEN = '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'
 GITHUB_USERNAME = 'Hionepaintech'
 GITHUB_REPO = 'Licensing-'
 GITHUB_FILE_PATH = 'main/ipmini'
-USERGIT = 'Hionepaintech'
 
 # Read the content of ipmini file from GitHub
 def read_github_file():
@@ -117,7 +119,7 @@ def button(update: Update, context: CallbackContext) -> None:
 
 def main():
     # Create the Updater and pass it your bot's token.
-    updater = Updater("6439511942:AAGjzHz3sA3gcUiLbHdLipC5JjwMUUdpUMg")
+    updater = Updater(token=TOKEN, use_context=True)
 
     # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher
@@ -135,3 +137,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+          
