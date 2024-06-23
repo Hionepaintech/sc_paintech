@@ -13,12 +13,12 @@ API_TOKEN = '7023411387:AAGIZ-iM60ZfOaNjy-acliJtfElYi3oAibk'
 # Detail GitHub
 GITHUB_USER = 'Hionepaintech'
 GITHUB_REPO = 'Licensing-'
-GITHUB_FILE_PATH = 'ipmini'
+GITHUB_FILE_PATH = 'main/ipmini'
 GITHUB_TOKEN = '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'
 
 # Fungsi untuk menangani perintah /start
 def start(update: Update, context: CallbackContext) -> None:
-    update.message.reply_text('Hii ini adalah bot @paintechvpn. Silahkan gunakan /menu untuk melihat daftar menu.')
+    update.message.reply_text('Hii ini adalah bot @paintechvpn\nSilahkan gunakan /menu untuk cek daftar bot nya.')
 
 # Fungsi untuk menangani perintah /menu
 def menu(update: Update, context: CallbackContext) -> None:
@@ -93,4 +93,4 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
-    
+
