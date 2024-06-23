@@ -3,11 +3,11 @@ import logging
 import requests
 from datetime import datetime, timedelta
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, CallbackContext
+from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes
 
 # Set up logging
 logging.basicConfig(
-    format='%(asctime)s - %(name)s - %(levellevel)s - %(message)s',
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     level=logging.INFO
 )
 logger = logging.getLogger(__name__)
@@ -73,7 +73,7 @@ def get_github_sha():
         return ''
 
 # Add IP to GitHub function
-def add_ip_to_github(user, exp_date, ip_vps):
+async def add_ip_to_github(user, exp_date, ip_vps):
     logger.info(f"Adding IP to GitHub: {ip_vps} for user {user} expiring on {exp_date}")
     content = read_github_file().strip()
     now = datetime.now().strftime('%Y-%m-%d')
@@ -99,18 +99,18 @@ def add_ip_to_github(user, exp_date, ip_vps):
         return False, "Failed to add IP to GitHub."
 
 # Start command
-def start(update: Update, context: CallbackContext) -> None:
-    update.message.reply_text('Hi! Use /addip to add your server IP to GitHub.')
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    await update.message.reply_text('Hi! Use /addip to add your server IP to GitHub.')
 
 # Add IP command
-def addip(update: Update, context: CallbackContext) -> None:
+async def addip(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     keyboard = [
         [
             InlineKeyboardButton("Confirm", callback_data='add_ip_confirm')
         ]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
-    update.message.reply_text(
+    await update.message.reply_text(
         'Tambahkan IP vps untuk install script\n'
         'Nama : Client\n'
         'Expired Day : 30 hari\n'
@@ -119,38 +119,32 @@ def addip(update: Update, context: CallbackContext) -> None:
     )
 
 # Callback query handler for confirmation button
-def button(update: Update, context: CallbackContext) -> None:
+async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     query = update.callback_query
-    query.answer()
+    await query.answer()
 
     if query.data == 'add_ip_confirm':
         user = 'Client'  # Replace with actual client name
         exp_date = (datetime.now() + timedelta(days=30)).strftime('%Y-%m-%d')  # Expiration date is 30 days from now
         ip_vps = '104.26.6.171'  # Replace with actual IPv4
-        success, message = add_ip_to_github(user, exp_date, ip_vps)
+        success, message = await add_ip_to_github(user, exp_date, ip_vps)
         if success:
-            query.edit_message_text(text=f'Successfully added IP {ip_vps} to GitHub.')
+            await query.edit_message_text(text=f'Successfully added IP {ip_vps} to GitHub.')
         else:
-            query.edit_message_text(text=f'Failed to add IP {ip_vps} to GitHub. Reason: {message}')
+            await query.edit_message_text(text=f'Failed to add IP {ip_vps} to GitHub. Reason: {message}')
 
 def main():
-    # Create the Updater and pass it your bot's token.
-    updater = Updater(TOKEN)
+    # Create the Application and pass it your bot's token.
+    application = Application.builder().token(TOKEN).build()
     
-    # Get the dispatcher to register handlers
-    dispatcher = updater.dispatcher
-
     # Register command handlers
-    dispatcher.add_handler(CommandHandler("start", start))
-    dispatcher.add_handler(CommandHandler("addip", addip))
-    dispatcher.add_handler(CallbackQueryHandler(button))
+    application.add_handler(CommandHandler("start", start))
+    application.add_handler(CommandHandler("addip", addip))
+    application.add_handler(CallbackQueryHandler(button))
 
-    # Start the Bot
-    updater.start_polling()
-
-    # Run the bot until you press Ctrl-C or the process receives SIGINT, SIGTERM or SIGABRT
-    updater.idle()
+    
+    application.run_polling()
 
 if __name__ == '__main__':
     main()
-        
+    
