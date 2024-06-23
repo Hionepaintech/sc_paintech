@@ -23,16 +23,20 @@ GITHUB_FILE_PATH = 'main/ipmini'
 
 # Read the content of ipmini file from GitHub
 def read_github_file():
+    logger.info("Reading GitHub file...")
     url = f'https://raw.githubusercontent.com/{GITHUB_USERNAME}/{GITHUB_REPO}/{GITHUB_FILE_PATH}'
     response = requests.get(url)
     if response.status_code == 200:
         content = response.text
+        logger.info("Successfully read GitHub file.")
         return content
     else:
+        logger.error(f"Failed to read GitHub file. Status code: {response.status_code}")
         return ''
 
 # Write the content back to ipmini file on GitHub
 def write_github_file(content):
+    logger.info("Writing to GitHub file...")
     url = f'https://api.github.com/repos/{GITHUB_USERNAME}/{GITHUB_REPO}/contents/{GITHUB_FILE_PATH}'
     headers = {
         'Authorization': f'token {GITHUB_TOKEN}',
@@ -44,10 +48,16 @@ def write_github_file(content):
         'sha': get_github_sha()
     }
     response = requests.put(url, json=message, headers=headers)
-    return response.status_code == 200
+    success = response.status_code == 200
+    if success:
+        logger.info("Successfully wrote to GitHub file.")
+    else:
+        logger.error(f"Failed to write to GitHub file. Status code: {response.status_code}")
+    return success
 
 # Get the sha of the current ipmini file from GitHub
 def get_github_sha():
+    logger.info("Getting SHA of GitHub file...")
     url = f'https://api.github.com/repos/{GITHUB_USERNAME}/{GITHUB_REPO}/contents/{GITHUB_FILE_PATH}'
     headers = {
         'Authorization': f'token {GITHUB_TOKEN}',
@@ -56,17 +66,21 @@ def get_github_sha():
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
         file_info = response.json()
+        logger.info("Successfully got SHA of GitHub file.")
         return file_info['sha']
     else:
+        logger.error(f"Failed to get SHA of GitHub file. Status code: {response.status_code}")
         return ''
 
 # Add IP to GitHub function
 def add_ip_to_github(user, exp_date, ip_vps):
+    logger.info(f"Adding IP to GitHub: {ip_vps} for user {user} expiring on {exp_date}")
     content = read_github_file().strip()
     now = datetime.now().strftime('%Y-%m-%d')
     
     # Check if the IP entry already exists
     if f'### {user} {exp_date} {ip_vps}' in content:
+        logger.warning("IP entry already exists.")
         return False, "IP entry already exists."
 
     # Format the new entry
@@ -78,8 +92,10 @@ def add_ip_to_github(user, exp_date, ip_vps):
     # Write the updated content back to GitHub
     success = write_github_file(content)
     if success:
+        logger.info("Successfully added IP to GitHub.")
         return True, "Successfully added IP to GitHub."
     else:
+        logger.error("Failed to add IP to GitHub.")
         return False, "Failed to add IP to GitHub."
 
 # Start command
