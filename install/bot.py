@@ -7,16 +7,16 @@ from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, Callback
 
 # Set up logging
 logging.basicConfig(
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    format='%(asctime)s - %(name)s - %(levellevel)s - %(message)s',
     level=logging.INFO
 )
 logger = logging.getLogger(__name__)
 
 # Your bot token
-TOKEN = os.getenv('6439511942:AAGjzHz3sA3gcUiLbHdLipC5JjwMUUdpUMg')
+TOKEN = '6439511942:AAGjzHz3sA3gcUiLbHdLipC5JjwMUUdpUMg'
 
 # Your GitHub token and repository info
-GITHUB_TOKEN = os.getenv('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')
+GITHUB_TOKEN = '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'
 GITHUB_USERNAME = 'Hionepaintech'
 GITHUB_REPO = 'Licensing-'
 GITHUB_FILE_PATH = 'main/ipmini'
@@ -153,4 +153,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
+        
