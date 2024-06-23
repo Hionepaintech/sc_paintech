@@ -8,7 +8,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 # Token API Telegram
-API_TOKEN = '6439511942:AAGjzHz3sA3gcUiLbHdLipC5JjwMUUdpUMg'
+API_TOKEN = '7023411387:AAGIZ-iM60ZfOaNjy-acliJtfElYi3oAibk'
 
 # Detail GitHub
 GITHUB_USER = 'Hionepaintech'
