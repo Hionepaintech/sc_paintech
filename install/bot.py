@@ -76,13 +76,7 @@ def get_github_sha():
 async def add_ip_to_github(user, exp_date, ip_vps):
     logger.info(f"Adding IP to GitHub: {ip_vps} for user {user} expiring on {exp_date}")
     content = read_github_file().strip()
-    now = datetime.now().strftime('%Y-%m-%d')
     
-    # Check if the IP entry already exists
-    if f'### {user} {exp_date} {ip_vps}' in content:
-        logger.warning("IP entry already exists.")
-        return False, "IP entry already exists."
-
     # Format the new entry
     new_entry = f'### {user} {exp_date} {ip_vps}\n'
 
@@ -93,10 +87,10 @@ async def add_ip_to_github(user, exp_date, ip_vps):
     success = write_github_file(content)
     if success:
         logger.info("Successfully added IP to GitHub.")
-        return True, "Successfully added IP to GitHub."
+        return True
     else:
         logger.error("Failed to add IP to GitHub.")
-        return False, "Failed to add IP to GitHub."
+        return False
 
 # Start command
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -104,19 +98,36 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 # Add IP command
 async def addip(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    keyboard = [
-        [
-            InlineKeyboardButton("Confirm", callback_data='add_ip_confirm')
-        ]
-    ]
-    reply_markup = InlineKeyboardMarkup(keyboard)
-    await update.message.reply_text(
-        'Tambahkan IP vps untuk install script\n'
-        'Nama : Client\n'
-        'Expired Day : 30 hari\n'
-        'IP vps : 104.26.6.171',  # Example IP, replace with actual IP
-        reply_markup=reply_markup
-    )
+    # Ask for client name
+    await update.message.reply_text('Input Client:')
+
+    # Wait for client name input
+    client_name_handler = Application.handler()
+    client_name_handler
+    client_name = await client_name_handler(context)
+    
+
+    # Ask for expiration date
+    await update.message.reply_text('Input Expired Day (e.g., 30):')
+
+    # Wait for expiration date input
+    expiration_date_handler = Application.handler()
+    expiration_date = await expiration_date_handler(context)
+
+    # Ask for IP address
+    await update.message.reply_text('Input IP:')
+
+    # Wait for IP address input
+    ip_handler = Application.handler()
+    ip_address = await ip_handler(context)
+
+    # Add IP to GitHub
+    success = await add_ip_to_github(client_name, expiration_date, ip_address)
+
+    if success:
+        await update.message.reply_text('Ok done..')
+    else:
+        await update.message.reply_text('Failed to add IP to GitHub.')
 
 # Callback query handler for confirmation button
 async def button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -142,7 +153,7 @@ def main():
     application.add_handler(CommandHandler("addip", addip))
     application.add_handler(CallbackQueryHandler(button))
 
-    
+    # Start the Bot
     application.run_polling()
 
 if __name__ == '__main__':
