@@ -575,7 +575,7 @@ chmod +x install_up.sh
 function xp(){
     clear
     echo "SUCCESSFULLY DELETE ALL EXPIRED ACCOUNT "
-    echo "---------------------------------------------"
+    echo "----------------------------------------"
 cd
 echo 1 > /proc/sys/vm/drop_caches
 data=( `cat /etc/xray/ssh | grep '^###' | cut -d ' ' -f 2 | sort | uniq`);
