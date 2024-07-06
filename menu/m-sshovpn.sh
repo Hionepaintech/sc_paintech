@@ -109,37 +109,26 @@ Format SSH OVPN Account
 _______________________________
 Username         : $Login
 Password         : $Pass
-Expired          : $exp
+Expired              : $exp
 _______________________________
-Host             : $domen
-ISP              : $ISP
-CITY             : $CITY
-Login Limit      : ${iplim} IP
+DOMAIN             : $domen
+ISP/PROVIDER      : $ISP
+REGION             : $CITY
+LOGIN LIMIT      : ${iplim} Device
+_______________________________
+       PORT INFORMATION 
+_______________________________
 Port OpenSSH     : 22
 Port Dropbear    : 143, 109
 Port SSH WS      : 80, 8080
 Port SSH SSL WS  : 443
 Port SSL/TLS     : 777, 222
-Port OVPN WS SSL : 2086
-Port OVPN SSL    : 990
-Port OVPN TCP    : 1194
-Port OVPN UDP    : 2200,
 BadVPN UDP       : 7100, 7300, 7300
-_______________________________
-Host Slowdns    : $sldomain
-Port Slowdns     : 80, 443, 53
-Pub Key          : $slkey
-_______________________________
-SSH UDP VIRAL : $domen:1-65535@$Login:$Pass
 _______________________________
 HTTP COSTUM : $domen:80@$Login:$Pass
 _______________________________
-Payload WS/WSS   :
+Payload Websocket   :
 GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]
-_______________________________
-OpenVPN SSL      : http://$domen:89/ssl.ovpn
-OpenVPN TCP      : http://$domen:89/tcp.ovpn
-OpenVPN UDP      : http://$domen:89/udp.ovpn
 _______________________________
 END
 if [[ -e /etc/cloudfront ]]; then
@@ -151,24 +140,24 @@ Username        :  <code>$Login</code>
 Password        :  <code>$Pass</code>
 Expired On       :  $exp
 ◇━━━━━━━━━━━━━━━━━◇
-ISP              :  $ISP
-CITY             :  $CITY
-Host             :  <code>$domen</code>
-Login Limit      :  ${iplim} IP
-Port OpenSSH    :  22
-Port Dropbear    :  109, 143
-Port SSH WS     :  80, 8080
-Port SSH SSL WS :  443
-Port SSL/TLS     :  777,222
-Port UDP Custom : 1-65535
-Port Slowdns     :  80, 443, 53
-Host Slowdns    :  <code>$sldomain</code>
-Pub Key          :  <code> $slkey</code>
-BadVPN UDP       :  7100, 7300, 7300
+ɪꜱᴘ ᴘʀᴏᴠɪᴅᴇʀ  =  $ISP
+ʀᴇɢɪᴏɴ             =  $CITY
+ʜᴏꜱᴛ/ᴅᴏᴍᴀɪɴ  =  <code>$domen</code>
+ʟᴏɢɪɴ ʟɪᴍɪᴛ     =  ${iplim} Device
 ◇━━━━━━━━━━━━━━━━━◇
-HTTP COSTUM : <code>$domen:80@$Login:$Pass</code>
+       PORT INFORMATION 
 ◇━━━━━━━━━━━━━━━━━◇
-PAYLOAD :
+ᴏᴘᴇɴꜱꜱʜ      22
+ᴅʀᴏᴘʙᴇᴀʀ    109, 143
+ꜱꜱʜ ᴡꜱ          80, 8080
+ꜱꜱʜ ꜱꜱʟ ᴡꜱ   443
+ssh stunel    777,222
+ssh ᴜᴅᴘ        1-65535
+ʙᴀᴅᴠᴘɴ ᴜᴅᴘɢᴡ   7100, 7300, 7300
+◇━━━━━━━━━━━━━━━━━◇
+HC : <code>$domen:80@$Login:$Pass</code>
+◇━━━━━━━━━━━━━━━━━◇
+PAYLOAD WEBSOCKET :
 <code>GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]</code>
 ◇━━━━━━━━━━━━━━━━━◇
 Save Link Account: http://$domen:89/ssh-$Login.txt
@@ -179,30 +168,30 @@ $author
 else
 TEXT="
 ◇━━━━━━━━━━━━━━━━━◇
-SSH Premium Account
+      Premium SSH Account
 ◇━━━━━━━━━━━━━━━━━◇
 Username        :  <code>$Login</code>
 Password        :  <code>$Pass</code>
 Expired On       :  $exp
 ◇━━━━━━━━━━━━━━━━━◇
-ISP              :  $ISP
-CITY             :  $CITY
-Host             :  <code>$domen</code>
-Login Limit      :  ${iplim} IP
-Port OpenSSH    :  22
-Port Dropbear    :  109, 143
-Port SSH WS     :  80, 8080
-Port SSH SSL WS :  443
-Port SSL/TLS     :  777,222
-Port UDP Custom  :1-65535
-Port Slowdns     :  80, 443, 53
-Host Slowdns    :  <code>$sldomain</code>
-Pub Key          :  <code> $slkey</code>
-BadVPN UDP       :  7100, 7300, 7300
+ɪꜱᴘ ᴘʀᴏᴠɪᴅᴇʀ  =  $ISP
+ʀᴇɢɪᴏɴ             =  $CITY
+ʜᴏꜱᴛ/ᴅᴏᴍᴀɪɴ  =  <code>$domen</code>
+ʟᴏɢɪɴ ʟɪᴍɪᴛ     =  ${iplim} Device
 ◇━━━━━━━━━━━━━━━━━◇
-HTTP COSTUM : <code>$domen:80@$Login:$Pass</code>
+       PORT INFORMATION 
 ◇━━━━━━━━━━━━━━━━━◇
-PAYLOAD   :
+ᴏᴘᴇɴꜱꜱʜ      22
+ᴅʀᴏᴘʙᴇᴀʀ    109, 143
+ꜱꜱʜ ᴡꜱ          80, 8080
+ꜱꜱʜ ꜱꜱʟ ᴡꜱ   443
+ssh stunel    777,222
+ssh ᴜᴅᴘ        1-65535
+ʙᴀᴅᴠᴘɴ ᴜᴅᴘɢᴡ   7100, 7300, 7300
+◇━━━━━━━━━━━━━━━━━◇
+HC : <code>$domen:80@$Login:$Pass</code>
+◇━━━━━━━━━━━━━━━━━◇
+PAYLOAD WEBSOCKET :
 <code>GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]</code>
 ◇━━━━━━━━━━━━━━━━━◇
 Save Link Account: http://$domen:89/ssh-$Login.txt
@@ -243,19 +232,19 @@ echo -e "$COLOR1 $NC  ${WH}Username   ${COLOR1}: ${WH}$Login"  | tee -a /etc/xra
 echo -e "$COLOR1 $NC  ${WH}Password   ${COLOR1}: ${WH}$Pass" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}Expired On ${COLOR1}: ${WH}$exp"  | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}ISP        ${COLOR1}: ${WH}$ISP" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}City       ${COLOR1}: ${WH}$CITY" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}Host       ${COLOR1}: ${WH}$domen" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}Login Limit${COLOR1}: ${WH}${iplim} IP" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}ISP Provider     ${COLOR1}: ${WH}$ISP" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}Negara       ${COLOR1}: ${WH}$CITY" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}Domain Host      ${COLOR1}: ${WH}$domen" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}Login Limit${COLOR1}: ${WH}${iplim} Device" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC ${WH}PORT INFORMATION " | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}OpenSSH    ${COLOR1}: ${WH}22" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}Dropbear   ${COLOR1}: ${WH}109, 143" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}SSH-WS     ${COLOR1}: ${WH}80,8080" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}SSH-SSL-WS ${COLOR1}: ${WH}443" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}SSL/TLS    ${COLOR1}: ${WH}777,222" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}PORT UDP  ${COLOR1}: ${WH}1-65535" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}PORT SLWDNS${COLOR1}: ${WH}80,443,53" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}NAMESERVER ${COLOR1}: ${WH}$sldomain" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}PUB KEY    ${COLOR1}: ${WH}$slkey" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}SSH STUNEL    ${COLOR1}: ${WH}777,222" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}SSH UDP  ${COLOR1}: ${WH}1-65535" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}UDPGW      ${COLOR1}: ${WH}7100-7300" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}HTTP COSTUM${COLOR1}: ${WH}$domen:80@$Login:$Pass" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
@@ -322,37 +311,26 @@ Format SSH OVPN Account
 _______________________________
 Username         : $Login
 Password         : $Pass
-Expired          : $timer Minutes
+Expired              : $exp
 _______________________________
-Host             : $domen
-ISP              : $ISP
-CITY             : $CITY
-Login Limit      : ${iplim} IP
+DOMAIN             : $domen
+ISP/PROVIDER      : $ISP
+REGION             : $CITY
+LOGIN LIMIT      : ${iplim} Device
+_______________________________
+       PORT INFORMATION 
+_______________________________
 Port OpenSSH     : 22
 Port Dropbear    : 143, 109
 Port SSH WS      : 80, 8080
 Port SSH SSL WS  : 443
 Port SSL/TLS     : 777, 222
-Port OVPN WS SSL : 2086
-Port OVPN SSL    : 990
-Port OVPN TCP    : 1194
-Port OVPN UDP    : 2200,
 BadVPN UDP       : 7100, 7300, 7300
-_______________________________
-Host Slowdns    : $sldomain
-Port Slowdns     : 80, 443, 53
-Pub Key          : $slkey
-_______________________________
-SSH UDP VIRAL : $domen:1-65535@$Login:$Pass
 _______________________________
 HTTP COSTUM : $domen:80@$Login:$Pass
 _______________________________
-Payload WS  :
+Payload Websocket   :
 GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]
-_______________________________
-OpenVPN SSL      : http://$domen:89/ssl.ovpn
-OpenVPN TCP      : http://$domen:89/tcp.ovpn
-OpenVPN UDP      : http://$domen:89/udp.ovpn
 _______________________________
 END
 if [[ -e /etc/cloudfront ]]; then
@@ -362,26 +340,26 @@ Trial SSH Premium Account
 ◇━━━━━━━━━━━━━━━━━◇
 Username        :  <code>$Login</code>
 Password        :  <code>$Pass</code>
-Expired On       :  $timer Minutes
+Expired On       :  $exp
 ◇━━━━━━━━━━━━━━━━━◇
-ISP              :  $ISP
-CITY             :  $CITY
-Host             :  <code>$domen</code>
-Login Limit      :  ${iplim} IP
-Port OpenSSH    :  22
-Port Dropbear    :  109, 143
-Port SSH WS     :  80, 8080
-Port SSH SSL WS :  443
-Port SSL/TLS     :  777,222
-Port UDP Custom  : 1-65535
-Port Slowdns     :  80, 443, 53
-Host Slowdns    :  <code>$sldomain</code>
-Pub Key          :  <code> $slkey</code>
-BadVPN UDP       :  7100, 7300, 7300
+ɪꜱᴘ ᴘʀᴏᴠɪᴅᴇʀ  =  $ISP
+ʀᴇɢɪᴏɴ             =  $CITY
+ʜᴏꜱᴛ/ᴅᴏᴍᴀɪɴ  =  <code>$domen</code>
+ʟᴏɢɪɴ ʟɪᴍɪᴛ     =  ${iplim} Device
 ◇━━━━━━━━━━━━━━━━━◇
-HTTP COSTUM : <code>$domen:80@$Login:$Pass</code>
+       PORT INFORMATION 
 ◇━━━━━━━━━━━━━━━━━◇
-PAYLOAD   :
+ᴏᴘᴇɴꜱꜱʜ      22
+ᴅʀᴏᴘʙᴇᴀʀ    109, 143
+ꜱꜱʜ ᴡꜱ          80, 8080
+ꜱꜱʜ ꜱꜱʟ ᴡꜱ   443
+ssh stunel    777,222
+ssh ᴜᴅᴘ        1-65535
+ʙᴀᴅᴠᴘɴ ᴜᴅᴘɢᴡ   7100, 7300, 7300
+◇━━━━━━━━━━━━━━━━━◇
+HC : <code>$domen:80@$Login:$Pass</code>
+◇━━━━━━━━━━━━━━━━━◇
+PAYLOAD WEBSOCKET :
 <code>GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]</code>
 ◇━━━━━━━━━━━━━━━━━◇
 Save Link Account: http://$domen:89/ssh-$Login.txt
@@ -396,26 +374,26 @@ Trial SSH Premium Account
 ◇━━━━━━━━━━━━━━━━━◇
 Username        :  <code>$Login</code>
 Password        :  <code>$Pass</code>
-Expired On       :  $timer Minutes
+Expired On       :  $exp
 ◇━━━━━━━━━━━━━━━━━◇
-ISP              :  $ISP
-CITY             :  $CITY
-Host             :  <code>$domen</code>
-Login Limit      :  ${iplim} IP
-Port OpenSSH    :  22
-Port Dropbear    :  109, 143
-Port SSH WS     :  80, 8080
-Port SSH SSL WS :  443
-Port SSL/TLS     :  777,222
-Port UDP Custom : 1-65535
-Port Slowdns     :  80, 443, 53
-Host Slowdns    :  <code>$sldomain</code>
-Pub Key          :  <code> $slkey</code>
-BadVPN UDP       :  7100, 7200, 7300
+ɪꜱᴘ ᴘʀᴏᴠɪᴅᴇʀ  =  $ISP
+ʀᴇɢɪᴏɴ             =  $CITY
+ʜᴏꜱᴛ/ᴅᴏᴍᴀɪɴ  =  <code>$domen</code>
+ʟᴏɢɪɴ ʟɪᴍɪᴛ     =  ${iplim} Device
 ◇━━━━━━━━━━━━━━━━━◇
-HTTP COSTUM : <code>$domen:80@$Login:$Pass</code>
+       PORT INFORMATION 
 ◇━━━━━━━━━━━━━━━━━◇
-PAYLOAD  :
+ᴏᴘᴇɴꜱꜱʜ      22
+ᴅʀᴏᴘʙᴇᴀʀ    109, 143
+ꜱꜱʜ ᴡꜱ          80, 8080
+ꜱꜱʜ ꜱꜱʟ ᴡꜱ   443
+ssh stunel    777,222
+ssh ᴜᴅᴘ        1-65535
+ʙᴀᴅᴠᴘɴ ᴜᴅᴘɢᴡ   7100, 7300, 7300
+◇━━━━━━━━━━━━━━━━━◇
+HC : <code>$domen:80@$Login:$Pass</code>
+◇━━━━━━━━━━━━━━━━━◇
+PAYLOAD WEBSOCKET :
 <code>GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]</code>
 ◇━━━━━━━━━━━━━━━━━◇
 Save Link Account: http://$domen:89/ssh-$Login.txt
@@ -443,21 +421,21 @@ echo -e "$COLOR1 ${NC} ${WH}• Trial SSH Premium Account • " | tee -a /etc/xr
 echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}Username   ${COLOR1}: ${WH}$Login"  | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}Password   ${COLOR1}: ${WH}$Pass" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}Expired On ${COLOR1}: ${WH}$timer Minutes"  | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}Expired On ${COLOR1}: ${WH}$exp"  | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}ISP        ${COLOR1}: ${WH}$ISP" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}City       ${COLOR1}: ${WH}$CITY" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}Host       ${COLOR1}: ${WH}$domen" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}Login Limit${COLOR1}: ${WH}${iplim} IP" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}ISP Provider     ${COLOR1}: ${WH}$ISP" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}Negara       ${COLOR1}: ${WH}$CITY" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}Domain Host      ${COLOR1}: ${WH}$domen" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}Login Limit${COLOR1}: ${WH}${iplim} Device" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC ${WH}PORT INFORMATION " | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}OpenSSH    ${COLOR1}: ${WH}22" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}Dropbear   ${COLOR1}: ${WH}109, 143" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}SSH-WS     ${COLOR1}: ${WH}80,8080" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}SSH-SSL-WS ${COLOR1}: ${WH}443" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}SSL/TLS    ${COLOR1}: ${WH}777,222" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}PORT UDP${COLOR1}: ${WH}1-65535" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}PORT SLWDNS${COLOR1}: ${WH}80,443,53" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}NAMESERVER ${COLOR1}: ${WH}$sldomain" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}PUB KEY    ${COLOR1}: ${WH}$slkey" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}SSH STUNEL    ${COLOR1}: ${WH}777,222" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}SSH UDP  ${COLOR1}: ${WH}1-65535" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}UDPGW      ${COLOR1}: ${WH}7100-7300" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}HTTP COSTUM${COLOR1}: ${WH}$domen:80@$Login:$Pass" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
