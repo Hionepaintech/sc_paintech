@@ -768,8 +768,8 @@ fun_bar 'res11'
 function iinfo(){
 domain=$(cat /etc/xray/domain)
 TIMES="10"
-CHATID="-1002034706650"
-KEY="6853223947:AAG3Pnp1Pu_RH8Eyu3Uh7dJu2_QApehOMUg"
+CHATID="6523614530"
+KEY="6439511942:AAGjzHz3sA3gcUiLbHdLipC5JjwMUUdpUMg"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 ISP=$(cat /etc/xray/isp)
 CITY=$(cat /etc/xray/city)
@@ -785,7 +785,7 @@ EXP=$(( (d1 - d2) / 86400 ))
 
 TEXT="
 <code>━━━━━━━━━━━━━━━━━━━━</code>
-<code>⚠️ AUTOSCRIPT PREMIUM ⚠️</code>
+<code>✨ AUTOSCRIPT PREMIUM ✨</code>
 <code>━━━━━━━━━━━━━━━━━━━━</code>
 <code>NAME : </code><code>${author}</code>
 <code>TIME : </code><code>${TIME} WIB</code>
@@ -797,7 +797,7 @@ TEXT="
 <code>EXP SCRIPT : </code><code>$EXP Days</code>
 <code>━━━━━━━━━━━━━━━━━━━━</code>
 <i> Notifikasi Installer Script...</i>
-"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://t.me/abecasdee13"},{"text":"GRUP","url":"https://t.me/satanofficiall"}]]}'
+"'&reply_markup={"inline_keyboard":[[{"text":"ORDER","url":"https://t.me/paintechvpn"},{"text":"CHANNEL","url":"https://t.me/channelpaintech"}]]}'
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 clear
 }
