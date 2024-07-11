@@ -768,7 +768,7 @@ fun_bar 'res11'
 function iinfo(){
 domain=$(cat /etc/xray/domain)
 TIMES="10"
-CHATID="6523614530"
+CHATID="-1002007305248"
 KEY="6439511942:AAGjzHz3sA3gcUiLbHdLipC5JjwMUUdpUMg"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 ISP=$(cat /etc/xray/isp)
@@ -787,10 +787,8 @@ TEXT="
 <code>━━━━━━━━━━━━━━━━━━━━</code>
 <code>✨ AUTOSCRIPT PREMIUM ✨</code>
 <code>━━━━━━━━━━━━━━━━━━━━</code>
-<code>NAME : </code><code>${author}</code>
+<code>CLIENT : </code><code>${author}</code>
 <code>TIME : </code><code>${TIME} WIB</code>
-<code>DOMAIN : </code><code>${domain}</code>
-<code>IP : </code><code>${MYIP}</code>
 <code>ISP : </code><code>${ISP} $CITY</code>
 <code>OS LINUX : </code><code>${MODEL2}</code>
 <code>RAM : </code><code>${RAMMS} MB</code>
