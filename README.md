@@ -31,3 +31,4 @@ wget https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/menu/m-upd
   <a href="https://www.facebook.com/paintechvpn"><img src="https://img.icons8.com/color/30/000000/facebook-new.png" alt="Facebook" style="margin-right: 15px;"></a>
   <a href="https://wa.me/6281249063560"><img src="https://img.icons8.com/color/30/000000/whatsapp--v1.png" alt="WhatsApp"></a>
 </p>
+klo mau maling minimal ijin dulu om
