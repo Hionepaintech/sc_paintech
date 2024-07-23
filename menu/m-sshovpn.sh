@@ -109,11 +109,11 @@ Format SSH OVPN Account
 _______________________________
 Username         : $Login
 Password         : $Pass
-Expired              : $exp
+Expired          : $exp
 _______________________________
-DOMAIN             : $domen
-ISP/PROVIDER      : $ISP
-REGION             : $CITY
+DOMAIN           : $domen
+ISP/PROVIDER     : $ISP
+REGION           : $CITY
 LOGIN LIMIT      : ${iplim} Device
 _______________________________
        PORT INFORMATION 
@@ -313,11 +313,11 @@ Format SSH OVPN Account
 _______________________________
 Username         : $Login
 Password         : $Pass
-Expired              : $exp
+Expired          : $exp
 _______________________________
-DOMAIN             : $domen
-ISP/PROVIDER      : $ISP
-REGION             : $CITY
+DOMAIN           : $domen
+ISP/PROVIDER     : $ISP
+REGION           : $CITY
 LOGIN LIMIT      : ${iplim} Device
 _______________________________
        PORT INFORMATION 
