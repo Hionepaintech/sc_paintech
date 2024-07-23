@@ -136,28 +136,29 @@ TEXT="
 ◇━━━━━━━━━━━━━━━━━◇
       Premium SSH Account
 ◇━━━━━━━━━━━━━━━━━◇
-Username        :  <code>$Login</code>
-Password        :  <code>$Pass</code>
-Expired On       :  $exp
+Username    = <code>$Login</code>
+Password    = <code>$Pass</code>
+Expired On  = $exp
 ◇━━━━━━━━━━━━━━━━━◇
-ɪꜱᴘ ᴘʀᴏᴠɪᴅᴇʀ  =  $ISP
-ʀᴇɢɪᴏɴ             =  $CITY
-ʜᴏꜱᴛ/ᴅᴏᴍᴀɪɴ  =  <code>$domen</code>
-ʟᴏɢɪɴ ʟɪᴍɪᴛ     =  ${iplim} Device
+Provider    =  $ISP
+Region      =  $CITY
+Host/Domain =  <code>$domen</code>
+Login limit =  ${iplim} Device
 ◇━━━━━━━━━━━━━━━━━◇
        PORT INFORMATION 
 ◇━━━━━━━━━━━━━━━━━◇
-ᴏᴘᴇɴꜱꜱʜ      22
-ᴅʀᴏᴘʙᴇᴀʀ    109, 143
-ꜱꜱʜ ᴡꜱ          80, 8080
-ꜱꜱʜ ꜱꜱʟ ᴡꜱ   443
-ssh stunel    777,222
-ssh ᴜᴅᴘ        1-65535
-ʙᴀᴅᴠᴘɴ ᴜᴅᴘɢᴡ   7100, 7300, 7300
+Openssh     = 22
+Dropbear    = 109, 143
+Ssh Ws      = 80, 8080
+Ssh Ws Ssl  = 443
+Ssh Stunel  = 777,222
+Ssh Udp     = 1-65535
+Badvpn Udp  = 7100, 7300, 7300
 ◇━━━━━━━━━━━━━━━━━◇
-HC : <code>$domen:80@$Login:$Pass</code>
+Http Custom = 
+<code>$domen:80@$Login:$Pass</code>
 ◇━━━━━━━━━━━━━━━━━◇
-PAYLOAD WEBSOCKET :
+Payload Ws  =
 <code>GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]</code>
 ◇━━━━━━━━━━━━━━━━━◇
 Save Link Account: http://$domen:89/ssh-$Login.txt
@@ -170,28 +171,29 @@ TEXT="
 ◇━━━━━━━━━━━━━━━━━◇
       Premium SSH Account
 ◇━━━━━━━━━━━━━━━━━◇
-Username        :  <code>$Login</code>
-Password        :  <code>$Pass</code>
-Expired On       :  $exp
+Username    = <code>$Login</code>
+Password    = <code>$Pass</code>
+Expired On  = $exp
 ◇━━━━━━━━━━━━━━━━━◇
-ɪꜱᴘ ᴘʀᴏᴠɪᴅᴇʀ  =  $ISP
-ʀᴇɢɪᴏɴ             =  $CITY
-ʜᴏꜱᴛ/ᴅᴏᴍᴀɪɴ  =  <code>$domen</code>
-ʟᴏɢɪɴ ʟɪᴍɪᴛ     =  ${iplim} Device
+Provider    =  $ISP
+Region      =  $CITY
+Host/Domain =  <code>$domen</code>
+Login limit =  ${iplim} Device
 ◇━━━━━━━━━━━━━━━━━◇
        PORT INFORMATION 
 ◇━━━━━━━━━━━━━━━━━◇
-ᴏᴘᴇɴꜱꜱʜ      22
-ᴅʀᴏᴘʙᴇᴀʀ    109, 143
-ꜱꜱʜ ᴡꜱ          80, 8080
-ꜱꜱʜ ꜱꜱʟ ᴡꜱ   443
-ssh stunel    777,222
-ssh ᴜᴅᴘ        1-65535
-ʙᴀᴅᴠᴘɴ ᴜᴅᴘɢᴡ   7100, 7300, 7300
+Openssh     = 22
+Dropbear    = 109, 143
+Ssh Ws      = 80, 8080
+Ssh Ws Ssl  = 443
+Ssh Stunel  = 777,222
+Ssh Udp     = 1-65535
+Badvpn Udp  = 7100, 7300, 7300
 ◇━━━━━━━━━━━━━━━━━◇
-HC : <code>$domen:80@$Login:$Pass</code>
+Http Custom = 
+<code>$domen:80@$Login:$Pass</code>
 ◇━━━━━━━━━━━━━━━━━◇
-PAYLOAD WEBSOCKET :
+Payload Ws  =
 <code>GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]</code>
 ◇━━━━━━━━━━━━━━━━━◇
 Save Link Account: http://$domen:89/ssh-$Login.txt
@@ -232,9 +234,9 @@ echo -e "$COLOR1 $NC  ${WH}Username   ${COLOR1}: ${WH}$Login"  | tee -a /etc/xra
 echo -e "$COLOR1 $NC  ${WH}Password   ${COLOR1}: ${WH}$Pass" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}Expired On ${COLOR1}: ${WH}$exp"  | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}ISP Provider     ${COLOR1}: ${WH}$ISP" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}Negara       ${COLOR1}: ${WH}$CITY" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}Domain Host      ${COLOR1}: ${WH}$domen" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}Provider   ${COLOR1}: ${WH}$ISP" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}Negara     ${COLOR1}: ${WH}$CITY" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}Domain     ${COLOR1}: ${WH}$domen" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}Login Limit${COLOR1}: ${WH}${iplim} Device" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC ${WH}PORT INFORMATION " | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
@@ -243,16 +245,16 @@ echo -e "$COLOR1 $NC  ${WH}OpenSSH    ${COLOR1}: ${WH}22" | tee -a /etc/xray/ssh
 echo -e "$COLOR1 $NC  ${WH}Dropbear   ${COLOR1}: ${WH}109, 143" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}SSH-WS     ${COLOR1}: ${WH}80,8080" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}SSH-SSL-WS ${COLOR1}: ${WH}443" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}SSH STUNEL    ${COLOR1}: ${WH}777,222" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}SSH UDP  ${COLOR1}: ${WH}1-65535" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}SSH STUNEL ${COLOR1}: ${WH}777,222" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}SSH UDP    ${COLOR1}: ${WH}1-65535" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}UDPGW      ${COLOR1}: ${WH}7100-7300" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}HTTP COSTUM${COLOR1}: ${WH}$domen:80@$Login:$Pass" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 ${NC}  ${WH}PAYLOAD${COLOR1}: ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 ${NC}  ${WH}PAYLOAD${COLOR1}  : ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1${NC}${WH}GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 ${NC}  ${WH}Save Link Acount    : " | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 ${NC}  ${WH}Save Link Acount  : " | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ${NC}  ${WH}http://$domen:89/ssh-$Login.txt${NC}$COLOR1 $NC" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ${NC}    ${WH}• $author •${NC}                 $COLOR1 $NC" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
@@ -336,30 +338,31 @@ END
 if [[ -e /etc/cloudfront ]]; then
 TEXT="
 ◇━━━━━━━━━━━━━━━━━◇
-Trial SSH Premium Account
+   Trial SSH Premium Account
 ◇━━━━━━━━━━━━━━━━━◇
-Username        :  <code>$Login</code>
-Password        :  <code>$Pass</code>
-Expired On       :  $exp
+Username    = <code>$Login</code>
+Password    = <code>$Pass</code>
+Expired On  = $exp
 ◇━━━━━━━━━━━━━━━━━◇
-ɪꜱᴘ ᴘʀᴏᴠɪᴅᴇʀ  =  $ISP
-ʀᴇɢɪᴏɴ             =  $CITY
-ʜᴏꜱᴛ/ᴅᴏᴍᴀɪɴ  =  <code>$domen</code>
-ʟᴏɢɪɴ ʟɪᴍɪᴛ     =  ${iplim} Device
+Provider    =  $ISP
+Region      =  $CITY
+Host/Domain =  <code>$domen</code>
+Login limit =  ${iplim} Device
 ◇━━━━━━━━━━━━━━━━━◇
        PORT INFORMATION 
 ◇━━━━━━━━━━━━━━━━━◇
-ᴏᴘᴇɴꜱꜱʜ      22
-ᴅʀᴏᴘʙᴇᴀʀ    109, 143
-ꜱꜱʜ ᴡꜱ          80, 8080
-ꜱꜱʜ ꜱꜱʟ ᴡꜱ   443
-ssh stunel    777,222
-ssh ᴜᴅᴘ        1-65535
-ʙᴀᴅᴠᴘɴ ᴜᴅᴘɢᴡ   7100, 7300, 7300
+Openssh     = 22
+Dropbear    = 109, 143
+Ssh Ws      = 80, 8080
+Ssh Ws Ssl  = 443
+Ssh Stunel  = 777,222
+Ssh Udp     = 1-65535
+Badvpn Udp  = 7100, 7300, 7300
 ◇━━━━━━━━━━━━━━━━━◇
-HC : <code>$domen:80@$Login:$Pass</code>
+Http Custom = 
+<code>$domen:80@$Login:$Pass</code>
 ◇━━━━━━━━━━━━━━━━━◇
-PAYLOAD WEBSOCKET :
+Payload Ws  =
 <code>GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]</code>
 ◇━━━━━━━━━━━━━━━━━◇
 Save Link Account: http://$domen:89/ssh-$Login.txt
@@ -370,30 +373,31 @@ $author
 else
 TEXT="
 ◇━━━━━━━━━━━━━━━━━◇
-Trial SSH Premium Account
+   Trial SSH Premium Account
 ◇━━━━━━━━━━━━━━━━━◇
-Username        :  <code>$Login</code>
-Password        :  <code>$Pass</code>
-Expired On       :  $exp
+Username    = <code>$Login</code>
+Password    = <code>$Pass</code>
+Expired On  = $exp
 ◇━━━━━━━━━━━━━━━━━◇
-ɪꜱᴘ ᴘʀᴏᴠɪᴅᴇʀ  =  $ISP
-ʀᴇɢɪᴏɴ             =  $CITY
-ʜᴏꜱᴛ/ᴅᴏᴍᴀɪɴ  =  <code>$domen</code>
-ʟᴏɢɪɴ ʟɪᴍɪᴛ     =  ${iplim} Device
+Provider    =  $ISP
+Region      =  $CITY
+Host/Domain =  <code>$domen</code>
+Login limit =  ${iplim} Device
 ◇━━━━━━━━━━━━━━━━━◇
        PORT INFORMATION 
 ◇━━━━━━━━━━━━━━━━━◇
-ᴏᴘᴇɴꜱꜱʜ      22
-ᴅʀᴏᴘʙᴇᴀʀ    109, 143
-ꜱꜱʜ ᴡꜱ          80, 8080
-ꜱꜱʜ ꜱꜱʟ ᴡꜱ   443
-ssh stunel    777,222
-ssh ᴜᴅᴘ        1-65535
-ʙᴀᴅᴠᴘɴ ᴜᴅᴘɢᴡ   7100, 7300, 7300
+Openssh     = 22
+Dropbear    = 109, 143
+Ssh Ws      = 80, 8080
+Ssh Ws Ssl  = 443
+Ssh Stunel  = 777,222
+Ssh Udp     = 1-65535
+Badvpn Udp  = 7100, 7300, 7300
 ◇━━━━━━━━━━━━━━━━━◇
-HC : <code>$domen:80@$Login:$Pass</code>
+Http Custom = 
+<code>$domen:80@$Login:$Pass</code>
 ◇━━━━━━━━━━━━━━━━━◇
-PAYLOAD WEBSOCKET :
+Payload Ws  =
 <code>GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]</code>
 ◇━━━━━━━━━━━━━━━━━◇
 Save Link Account: http://$domen:89/ssh-$Login.txt
@@ -423,9 +427,9 @@ echo -e "$COLOR1 $NC  ${WH}Username   ${COLOR1}: ${WH}$Login"  | tee -a /etc/xra
 echo -e "$COLOR1 $NC  ${WH}Password   ${COLOR1}: ${WH}$Pass" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}Expired On ${COLOR1}: ${WH}$exp"  | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}ISP Provider     ${COLOR1}: ${WH}$ISP" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}Negara       ${COLOR1}: ${WH}$CITY" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}Domain Host      ${COLOR1}: ${WH}$domen" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}Provider   ${COLOR1}: ${WH}$ISP" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}Negara     ${COLOR1}: ${WH}$CITY" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}Domain     ${COLOR1}: ${WH}$domen" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}Login Limit${COLOR1}: ${WH}${iplim} Device" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC ${WH}PORT INFORMATION " | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
@@ -434,16 +438,16 @@ echo -e "$COLOR1 $NC  ${WH}OpenSSH    ${COLOR1}: ${WH}22" | tee -a /etc/xray/ssh
 echo -e "$COLOR1 $NC  ${WH}Dropbear   ${COLOR1}: ${WH}109, 143" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}SSH-WS     ${COLOR1}: ${WH}80,8080" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}SSH-SSL-WS ${COLOR1}: ${WH}443" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}SSH STUNEL    ${COLOR1}: ${WH}777,222" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 $NC  ${WH}SSH UDP  ${COLOR1}: ${WH}1-65535" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}SSH STUNEL ${COLOR1}: ${WH}777,222" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 $NC  ${WH}SSH UDP    ${COLOR1}: ${WH}1-65535" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}UDPGW      ${COLOR1}: ${WH}7100-7300" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 $NC  ${WH}HTTP COSTUM${COLOR1}: ${WH}$domen:80@$Login:$Pass" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 ${NC}  ${WH}PAYLOAD${COLOR1}: ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 ${NC}  ${WH}PAYLOAD${COLOR1}  : ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1${NC}${WH}GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
-echo -e "$COLOR1 ${NC}  ${WH}Save Link Acount    : " | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
+echo -e "$COLOR1 ${NC}  ${WH}Save Link Acount   : " | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ${NC}  ${WH}http://$domen:89/ssh-$Login.txt${NC}$COLOR1 $NC" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ◇━━━━━━━━━━━━━━━━━◇ ${NC}" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
 echo -e "$COLOR1 ${NC}    ${WH}• $author •${NC}                 $COLOR1 $NC" | tee -a /etc/xray/sshx/akun/log-create-${Login}.log
