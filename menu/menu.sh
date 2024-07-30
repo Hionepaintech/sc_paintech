@@ -30,43 +30,6 @@ cpu_load=$(uptime | awk -F'load average:' '{print $2}' | cut -d, -f1)
 cpu_load_percent=$(echo "scale=2; $cpu_load * 100 / $(nproc)" | bc)
 checking_sc() {
 useexp=$(curl -sS $data_ip | grep $ipsaya | awk '{print $3}')
-madmin=$(curl -sS https://raw.githubusercontent.com/Hionepaintech/Licensing-/main/ipmini | grep $MYIP | awk '{print $5}')
-checking_sc
-cd
-if [ ! -e /etc/per/id ]; then
-mkdir -p /etc/per
-echo "" > /etc/per/id
-echo "" > /etc/per/token
-elif [ ! -e /etc/perlogin/id ]; then
-mkdir -p /etc/perlogin
-echo "" > /etc/perlogin/id
-echo "" > /etc/perlogin/token
-elif [ ! -e /usr/bin/id ]; then
-echo "" > /usr/bin/idchat
-echo "" > /usr/bin/token
-fi
-if [ ! -e /etc/xray/ssh ]; then
-echo "" > /etc/xray/ssh
-elif [ ! -e /etc/xray/sshx ]; then
-mkdir -p /etc/xray/sshx
-elif [ ! -e /etc/xray/sshx/listlock ]; then
-echo "" > /etc/xray/sshx/listlock
-elif [ ! -e /etc/vmess ]; then
-mkdir -p /etc/vmess
-elif [ ! -e /etc/vmess/listlock ]; then
-echo "" > /etc/vmess/listlock
-elif [ ! -e /etc/vless ]; then
-mkdir -p /etc/vless
-elif [ ! -e /etc/vless/listlock ]; then
-echo "" > /etc/vless/listlock
-elif [ ! -e /etc/trojan ]; then
-mkdir -p /etc/trojan
-elif [ ! -e /etc/trojan/listlock ]; then
-echo "" > /etc/trojan/listlock
-elif [ ! -e /etc/xray/noob ]; then
-echo "" > /etc/xray/noob
-fi
-clear
 MODEL2=$(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')
 LOADCPU=$(printf '%-0.00001s' "$(top -bn1 | awk '/Cpu/ { cpu = "" 100 - $8 "%" }; END { print cpu }')")
 CORE=$(printf '%-1s' "$(grep -c cpu[0-9] /proc/stat)")
