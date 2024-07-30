@@ -28,8 +28,6 @@ date_list=$(date +"%Y-%m-%d" -d "$data_server")
 data_ip="https://raw.githubusercontent.com/Hionepaintech/Licensing-/main/ipmini"
 cpu_load=$(uptime | awk -F'load average:' '{print $2}' | cut -d, -f1)
 cpu_load_percent=$(echo "scale=2; $cpu_load * 100 / $(nproc)" | bc)
-checking_sc() {
-useexp=$(curl -sS $data_ip | grep $ipsaya | awk '{print $3}')
 MODEL2=$(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')
 LOADCPU=$(printf '%-0.00001s' "$(top -bn1 | awk '/Cpu/ { cpu = "" 100 - $8 "%" }; END { print cpu }')")
 CORE=$(printf '%-1s' "$(grep -c cpu[0-9] /proc/stat)")
