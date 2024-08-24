@@ -1,9 +1,4 @@
 #!/bin/bash
-# Proxy For Edukasi & Imclass
-
-# Link Hosting Kalian
-PAINTECH="https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/install"
-
 wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/Hionepaintech/sc_paintech/main/sshws/ws-dropbear
 chmod +x /usr/local/bin/ws-dropbear
 
